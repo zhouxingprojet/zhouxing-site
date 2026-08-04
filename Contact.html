@@ -1,195 +1,82 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>联系我们</title>
-<style>
-  :root{
-    --bg: #FFFFFF;
-    --ink: #1A1A1A;
-    --muted: #767676;
-    --line: #E5E5E5;
-    --accent: #1A1A1A;
-  }
-
-  * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-    line-height: 1.6;
-  }
-
-  .wrap {
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 80px 24px;
-  }
-
-  h1 {
-    font-size: 32px;
-    font-weight: 600;
-    margin: 0 0 12px;
-    letter-spacing: -0.01em;
-  }
-
-  .lead {
-    color: var(--muted);
-    font-size: 15px;
-    margin: 0 0 48px;
-  }
-
-  .info-list {
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid var(--line);
-    margin-bottom: 48px;
-  }
-  .info-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 18px 0;
-    border-bottom: 1px solid var(--line);
-  }
-  .info-label {
-    font-size: 13px;
-    color: var(--muted);
-  }
-  .info-value {
-    font-size: 15px;
-    font-weight: 500;
-    text-align: right;
-  }
-  .info-value a { color: inherit; text-decoration: none; }
-  .info-value a:hover { text-decoration: underline; }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  .field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-  label {
-    font-size: 13px;
-    color: var(--muted);
-  }
-  input, textarea {
-    font-family: inherit;
-    font-size: 15px;
-    padding: 10px 12px;
-    border: 1px solid var(--line);
-    border-radius: 6px;
-    background: transparent;
-    color: var(--ink);
-    outline: none;
-  }
-  input:focus-visible, textarea:focus-visible {
-    border-color: var(--accent);
-  }
-  textarea { resize: vertical; min-height: 100px; }
-
-  button[type="submit"] {
-    align-self: flex-start;
-    margin-top: 4px;
-    background: var(--accent);
-    color: #fff;
-    border: none;
-    font-size: 14px;
-    font-weight: 500;
-    padding: 11px 24px;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  button[type="submit"]:hover { opacity: 0.85; }
-  button[type="submit"]:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
-
-  .form-status {
-    font-size: 13px;
-    color: var(--muted);
-    min-height: 16px;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    * { transition: none !important; }
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Zhou Xing</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <div class="brand">
+            <img src="logo.png" alt="Zhou Xing logo">
+            <h1>Zhou Xing</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="Cv.html">Cv</a></li>
+                <li><a href="Contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <div class="wrap">
-
-    <h1>联系我们</h1>
-    <p class="lead">有任何问题或合作意向,欢迎通过以下方式联系,或直接填写表单。</p>
-
-    <div class="info-list">
-      <div class="info-row">
-        <span class="info-label">邮箱</span>
-        <span class="info-value">
-          <a href="mailto:contact@zhou-xing.com">contact@zhou-xing.com</a><br>
-          <a href="mailto:info@zhou-xing.com">info@zhou-xing.com</a><br>
-          <a href="mailto:atelier@zhou-xing.com">atelier@zhou-xing.com</a>
-        </span>
-      </div>
-      <div class="info-row">
-        <span class="info-label">电话</span>
-        <span class="info-value">+33 07 79 79 95 58</span>
-      </div>
-      <div class="info-row">
-        <span class="info-label">地址</span>
-        <span class="info-value">41 Rue Anne Frank<br>94380 Bonneuil-sur-Marne<br>France</span>
-      </div>
+    <div class="page-heading">
+        <h2>Contact</h2>
+        <p>For inquiries, collaborations, or general questions, feel free to reach out through any of the details below, or send a message using the form.</p>
     </div>
 
-    <form id="contactForm" novalidate>
-      <div class="field">
-        <label for="name">姓名</label>
-        <input type="text" id="name" name="name" required autocomplete="name">
-      </div>
-      <div class="field">
-        <label for="email">邮箱</label>
-        <input type="email" id="email" name="email" required autocomplete="email">
-      </div>
-      <div class="field">
-        <label for="message">留言</label>
-        <textarea id="message" name="message" required></textarea>
-      </div>
-      <button type="submit">发送</button>
-      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-    </form>
+    <div class="mark-divider" aria-hidden="true">
+        <img src="logo.png" alt="">
+    </div>
 
-  </div>
+    <main class="contact-body">
+        <ul class="info-list">
+            <li><strong>Email</strong> <a href="mailto:contact@zhou-xing.com">contact@zhou-xing.com</a>, <a href="mailto:info@zhou-xing.com">info@zhou-xing.com</a>, <a href="mailto:atelier@zhou-xing.com">atelier@zhou-xing.com</a></li>
+            <li><strong>Phone</strong> +33 07 79 79 95 58</li>
+            <li><strong>Address</strong> 41 Rue Anne Frank, 94380 Bonneuil-sur-Marne, France</li>
+        </ul>
 
-  <script>
-    const form = document.getElementById('contactForm');
-    const status = document.getElementById('formStatus');
+        <form id="contactForm" novalidate>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
 
-      if (!name || !email || !message) {
-        status.textContent = '请填写完整信息。';
-        return;
-      }
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
 
-      // 演示用状态提示,实际使用时替换为真实的表单提交逻辑
-      status.textContent = '已准备好发送 — 需接入后端服务完成实际提交。';
-      form.reset();
-    });
-  </script>
+            <button type="submit">Send</button>
+            <p id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+    </main>
 
+    <footer>
+        <img src="logo.png" alt="">
+        <p>&copy; 2024 Zhou Xing</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const status = document.getElementById('formStatus');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                status.textContent = 'Please fill in all fields.';
+                return;
+            }
+
+            // Demo only — connect to a backend service to actually send messages.
+            status.textContent = 'Ready to send — connect a backend service to complete submission.';
+            form.reset();
+        });
+    </script>
 </body>
 </html>
