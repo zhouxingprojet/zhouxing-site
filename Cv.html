@@ -3,193 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Xing Zhou — CV, études, expériences professionnelles, projets de recherche et expositions collectives.">
-    <title>Cv - Xing Zhou</title>
+    <title>CV — Xing Zhou</title>
+    <meta name="description" content="Xing Zhou — Styliste et artiste plasticien basé en région parisienne. CV, formations, expériences professionnelles, projets de recherche et expositions.">
+
+    <!-- Open Graph (pour le partage sur les réseaux sociaux) -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="CV — Xing Zhou | Styliste & Artiste Plasticien">
+    <meta property="og:description" content="Pratique à la croisée de la mode et de l'art contemporain : textile, photographie, vidéo et peinture.">
+    <meta property="og:image" content="logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Structured Data Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Xing Zhou",
+      "jobTitle": "Styliste et artiste plasticien",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paris",
+        "addressCountry": "FR"
+      },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Université Paris 1 Panthéon-Sorbonne" },
+        { "@type": "CollegeOrUniversity", "name": "Université Paris 8" },
+        { "@type": "CollegeOrUniversity", "name": "Université Lyon 2" }
+      ]
+    }
+    </script>
 </head>
 <body>
     <header>
         <div class="brand">
-            <img src="logo.png" alt="Xing Zhou logo">
+            <img src="logo.png" alt="Xing Zhou logo" width="26" height="26">
             <h1>Xing Zhou</h1>
         </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="Cv.html" aria-current="page">Cv</a></li>
-                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="cv.html" aria-current="page">CV</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="page-heading">
         <h2>Xing Zhou</h2>
-        <p><i>Artiste plasticienne — Paris</i></p>
+        <p><strong>Styliste & Artiste plasticien — Paris</strong></p>
+        <p style="margin-top: 16px; line-height: 1.6; font-family: 'EB Garamond', serif; font-size: 16px; color: var(--ink);">
+            Styliste et artiste plasticien basé en région parisienne, je développe une pratique à la croisée de la mode et de l’art contemporain. Formé entre la Chine et la France, je conçois des collections et des projets visuels mêlant textile, photographie, vidéo et peinture. Mon travail explore notamment l’identité culturelle, la mémoire et le dialogue entre tradition et modernité.
+        </p>
     </div>
 
     <div class="mark-divider" aria-hidden="true">
-        <img src="logo.png" alt="">
+        <img src="logo.png" alt="" loading="lazy" decoding="async">
     </div>
 
     <main class="cv-body">
 
+        <!-- Expériences professionnelles -->
         <section class="cv-section">
-            <h3>Études et diplômes</h3>
+            <h3>Expériences professionnelles</h3>
+
+            <div class="cv-entry">
+                <div class="cv-entry-head">
+                    <span class="cv-org">Comme des Loups <small style="color: var(--ink-dim);">(Paris)</small></span>
+                    <span class="cv-date">Sept. 2022 – Sept. 2025</span>
+                </div>
+                <ul class="cv-roles">
+                    <li>Styliste</li>
+                </ul>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-head">
+                    <span class="cv-org">Qin Zhen <small style="color: var(--ink-dim);">(Pékin)</small></span>
+                    <span class="cv-date">Juin 2018 – Déc. 2018</span>
+                </div>
+                <ul class="cv-roles">
+                    <li>Styliste</li>
+                </ul>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-head">
+                    <span class="cv-org">SindyFlower <small style="color: var(--ink-dim);">(Pékin)</small></span>
+                    <span class="cv-date">Oct. 2017 – Juin 2018</span>
+                </div>
+                <ul class="cv-roles">
+                    <li>Directeur</li>
+                </ul>
+            </div>
+
+            <div class="cv-entry">
+                <div class="cv-entry-head">
+                    <span class="cv-org">Su Evan Liu <small style="color: var(--ink-dim);">(Pékin)</small></span>
+                    <span class="cv-date">Avril 2017 – Oct. 2017</span>
+                </div>
+                <ul class="cv-roles">
+                    <li>Assistant Styliste</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Formations -->
+        <section class="cv-section">
+            <h3>Formations</h3>
 
             <div class="cv-entry">
                 <div class="cv-entry-head">
                     <span class="cv-org">Université Paris 1 Panthéon-Sorbonne</span>
-                    <span class="cv-date">2023 – 2024</span>
+                    <span class="cv-date">2021 – 2023</span>
                 </div>
                 <ul class="cv-roles">
-                    <li>Master 2 Arts plastiques</li>
-                    <li>Master 1 Arts plastiques</li>
+                    <li>Master Arts plastiques</li>
                 </ul>
             </div>
 
             <div class="cv-entry">
                 <div class="cv-entry-head">
                     <span class="cv-org">Université Paris 8</span>
-                    <span class="cv-date">2022 – 2024</span>
+                    <span class="cv-date">2021 – 2022</span>
                 </div>
                 <ul class="cv-roles">
-                    <li>Master 2 Arts plastiques EDAM</li>
-                    <li>Master 1 Arts plastiques EDAM</li>
-                    <li>Licence 3 Arts plastiques</li>
+                    <li>Licence Arts plastiques</li>
                 </ul>
             </div>
 
             <div class="cv-entry">
                 <div class="cv-entry-head">
                     <span class="cv-org">Université Lyon 2</span>
-                    <span class="cv-date">2019 – 2021</span>
+                    <span class="cv-date">2019 – 2020</span>
                 </div>
                 <ul class="cv-roles">
-                    <li>Licence 3 Information et Communication</li>
-                    <li>DU CIEF Français</li>
+                    <li>Licence Information et communication</li>
                 </ul>
             </div>
 
             <div class="cv-entry">
                 <div class="cv-entry-head">
-                    <span class="cv-org">École de FBC</span>
-                    <span class="cv-date">2018</span>
+                    <span class="cv-org">Université JXSTNU <small style="color: var(--ink-dim);">(Chine)</small></span>
+                    <span class="cv-date">2010 – 2013</span>
                 </div>
                 <ul class="cv-roles">
-                    <li>Français</li>
-                </ul>
-            </div>
-
-            <div class="cv-entry">
-                <div class="cv-entry-head">
-                    <span class="cv-org">Université JXSTNU</span>
-                    <span class="cv-date">2013 – 2017</span>
-                </div>
-                <ul class="cv-roles">
-                    <li>Design de vêtement</li>
+                    <li>Licence Design de vêtement</li>
                 </ul>
             </div>
         </section>
 
-        <section class="cv-section">
-            <h3>Expérience artistique</h3>
-
-            <div class="cv-entry">
-                <div class="cv-entry-head">
-                    <span class="cv-org">Comme des loups</span>
-                    <span class="cv-date">2023 –</span>
-                </div>
-                <ul class="cv-roles">
-                    <li>Free lancer</li>
-                    <li>Stage</li>
-                </ul>
-            </div>
-
-            <div class="cv-entry">
-                <div class="cv-entry-head">
-                    <span class="cv-org">Les Fileuses</span>
-                    <span class="cv-date">2023</span>
-                </div>
-                <ul class="cv-roles">
-                    <li>Stage</li>
-                </ul>
-            </div>
-
-            <div class="cv-entry">
-                <div class="cv-entry-head">
-                    <span class="cv-org">Qin Zhen</span>
-                    <span class="cv-date">2018 – 2019</span>
-                </div>
-                <ul class="cv-roles">
-                    <li>Designer</li>
-                </ul>
-            </div>
-
-            <div class="cv-entry">
-                <div class="cv-entry-head">
-                    <span class="cv-org">SindyFlowe</span>
-                    <span class="cv-date">2017 – 2018</span>
-                </div>
-                <ul class="cv-roles">
-                    <li>Assistant directeur</li>
-                </ul>
-            </div>
-
-            <div class="cv-entry">
-                <div class="cv-entry-head">
-                    <span class="cv-org">Su Evan Liu</span>
-                    <span class="cv-date">2017</span>
-                </div>
-                <ul class="cv-roles">
-                    <li>Assistant stylisme</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="cv-section">
-            <h3>Autres expériences</h3>
-
-            <div class="cv-entry">
-                <div class="cv-entry-head">
-                    <span class="cv-org">Hôtel Neptune</span>
-                    <span class="cv-date">2023 – 2024</span>
-                </div>
-                <ul class="cv-roles">
-                    <li>Réception</li>
-                </ul>
-            </div>
-
-            <div class="cv-entry">
-                <div class="cv-entry-head">
-                    <span class="cv-org">Trois fois plus de piment</span>
-                    <span class="cv-date">2020 – 2022</span>
-                </div>
-                <ul class="cv-roles">
-                    <li>Serveur</li>
-                </ul>
-            </div>
-
-            <div class="cv-entry">
-                <div class="cv-entry-head">
-                    <span class="cv-org">Goramen</span>
-                    <span class="cv-date">2019 – 2021</span>
-                </div>
-                <ul class="cv-roles">
-                    <li>Cuisinier</li>
-                </ul>
-            </div>
-        </section>
-
+        <!-- Projets de recherche -->
         <section class="cv-section">
             <h3>Projets de recherche</h3>
             <ul class="cv-list">
-                <li><span class="cv-title"><i>Vêtement et installation</i></span><span class="cv-date">2022</span></li>
-                <li><span class="cv-title"><i>La mode et la mort</i></span><span class="cv-date">2023</span></li>
-                <li><span class="cv-title"><i>L'art vestimentaire et performance</i></span><span class="cv-date">2024</span></li>
+                <li>
+                    <span class="cv-title"><i>Vêtement et installation</i></span>
+                    <span class="cv-date">2022</span>
+                </li>
+                <li>
+                    <span class="cv-title"><i>La mode et la mort</i></span>
+                    <span class="cv-date">2023</span>
+                </li>
+                <li>
+                    <span class="cv-title"><i>L'art vestimentaire et performance</i></span>
+                    <span class="cv-date">2024</span>
+                </li>
             </ul>
         </section>
 
+        <!-- Expositions collectives -->
         <section class="cv-section">
             <h3>Expositions collectives</h3>
             <ul class="cv-list">
@@ -201,7 +190,7 @@
                 <li>
                     <span class="cv-title"><i>La mode et la mort</i></span>
                     <span class="cv-date">2023</span>
-                    <span class="cv-desc">Co-création avec Monia dans « 60 ans d'écart », la résidence Dionysia, Saint-Denis</span>
+                    <span class="cv-desc">Co-création avec Monia dans « 60 ans d'écart », La résidence Dionysia, Saint-Denis</span>
                 </li>
             </ul>
         </section>
@@ -209,8 +198,11 @@
     </main>
 
     <footer>
-        <img src="logo.png" alt="">
+        <img src="logo.png" alt="" loading="lazy" decoding="async">
         <p>&copy; 2026 Xing Zhou</p>
     </footer>
 </body>
 </html>
+   
+            
+          
