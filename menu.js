@@ -6,10 +6,10 @@
   const links = [
     ['index.html', 'Accueil'],
     ['works.html', 'Œuvres'],
-    ['shop.html', 'Boutique'],
     ['portfolio.html', 'Projets'],
     ['Cv.html', 'Biographie / CV'],
-    ['Contact.html', 'Contact']
+    ['Contact.html', 'Contact'],
+    ['shop.html', 'Boutique']
   ];
   const current = location.pathname.split('/').pop() || 'index.html';
   nav.innerHTML = links.map(([href, label]) => `<a href="${href}"${current === href ? ' aria-current="page"' : ''}>${label}</a>`).join('');
