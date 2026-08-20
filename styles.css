@@ -15,3 +15,12 @@ footer{max-width:1344px;margin:110px auto 30px;padding:18px 0;border-top:1px sol
 @media(max-width:850px){.locale{display:flex;justify-content:flex-start;margin:12px 0 0}}
 footer .locale{margin:0;justify-content:center}
 @media(max-width:850px){footer{flex-wrap:wrap;gap:18px}footer .locale{justify-content:center;margin:0}}
+
+/* Unified typography */
+body,.intro h1,.page-title h1,.contact-page h1,.project-copy h2,.project-copy>p:last-child,.intro>p:last-child,.contact-grid>p,dd,.bio h1,.bio p,.cv-row h3{font-family:'DM Sans',Arial,sans-serif}
+.intro h1,.page-title h1,.contact-page h1{font-size:clamp(36px,5vw,70px);font-weight:400;line-height:1.02;letter-spacing:-.035em}
+.project-copy h2{font-size:clamp(32px,4vw,54px);font-weight:400;letter-spacing:-.03em}
+.bio h1{font-size:clamp(40px,6vw,78px);font-weight:400;letter-spacing:-.035em}
+.project-copy>p:last-child,.intro>p:last-child,.contact-grid>p,.bio p{font-size:17px;line-height:1.55}
+.cv-row h3,dd{font-size:17px}
+@media(max-width:850px){.intro h1{font-size:42px}.contact-page h1,.page-title h1{font-size:40px}.bio h1{font-size:46px}}
