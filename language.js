@@ -25,7 +25,7 @@
       'Collaborations,': 'Collaborations,', 'expositions & projets.': 'exhibitions & projects.',
       'Collaborations,\nexpositions & projets.': 'Collaborations,\nexhibitions & projects.',
       'Pour toute demande professionnelle, proposition d’exposition ou collaboration, écrivez-moi directement.': 'For professional enquiries, exhibition proposals, or collaborations, please contact me directly.',
-      'Téléphone': 'Phone', 'Lieu': 'Location', 'Nom': 'Name', 'Votre e-mail': 'Your email', 'Sujet': 'Subject', 'Message': 'Message', 'Envoyer le message': 'Send message'
+      'Téléphone': 'Phone', 'Lieu': 'Location', 'Écrivez-moi': 'Write to me', 'Nom': 'Name', 'Votre e-mail': 'Your email', 'Sujet': 'Subject', 'Message': 'Message', 'Envoyer le message': 'Send message'
     },
     zh: {
       'Accueil': '首页', 'Œuvres sélectionnées': '精选作品', 'Installation, performance, textile et peinture.': '装置、行为、纺织与绘画。',
@@ -52,7 +52,7 @@
       'Collaborations,': '合作、', 'expositions & projets.': '展览与项目。',
       'Collaborations,\nexpositions & projets.': '合作、展览\n与项目。',
       'Pour toute demande professionnelle, proposition d’exposition ou collaboration, écrivez-moi directement.': '如有专业咨询、展览提案或合作邀请，请直接与我联系。',
-      'Téléphone': '电话', 'Lieu': '地点', 'Nom': '姓名', 'Votre e-mail': '您的邮箱', 'Sujet': '主题', 'Message': '留言', 'Envoyer le message': '发送留言'
+      'Téléphone': '电话', 'Lieu': '地点', 'Écrivez-moi': '给我留言', 'Nom': '姓名', 'Votre e-mail': '您的邮箱', 'Sujet': '主题', 'Message': '留言', 'Envoyer le message': '发送留言'
     }
   };
 
