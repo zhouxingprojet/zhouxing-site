@@ -1,0 +1,21 @@
+.admin-body{min-height:100vh;background:#fff}
+.admin-page{max-width:1080px;margin:0 auto;padding:42px 34px 54px}
+.admin-header{display:flex;align-items:center;justify-content:space-between;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.admin-brand{display:flex;align-items:center;gap:12px;text-decoration:none;text-transform:uppercase;letter-spacing:.09em;font-size:11px}
+.admin-brand img{width:34px;height:26px;object-fit:contain;filter:invert(1);mix-blend-mode:multiply}
+.admin-back{color:var(--muted);text-decoration:none;text-transform:uppercase;letter-spacing:.09em;font-size:9px}
+.admin-back:hover{color:var(--ink)}
+.admin-intro{display:grid;grid-template-columns:1fr 2fr;gap:18px 60px;padding:82px 0 70px}
+.admin-intro .eyebrow{grid-row:1/3}
+.admin-intro h1{margin:0;font-size:clamp(40px,6vw,72px);font-weight:400;line-height:1;letter-spacing:-.045em}
+.admin-intro>p:last-child{max-width:580px;margin:6px 0 0;color:var(--muted);font-size:13px;line-height:1.65}
+.admin-links{border-top:1px solid var(--ink)}
+.admin-card{display:grid;grid-template-columns:54px 1fr auto;gap:22px;align-items:center;padding:25px 4px;border-bottom:1px solid var(--line);text-decoration:none;transition:padding .2s}
+.admin-card:hover{padding-left:12px;padding-right:12px}
+.admin-number{font-size:9px;letter-spacing:.1em;color:var(--muted)}
+.admin-card-copy{display:flex;flex-direction:column;gap:6px}
+.admin-card-copy strong{font-size:16px;font-weight:500}
+.admin-card-copy small{color:var(--muted);font-size:11px;line-height:1.5}
+.admin-arrow{font-size:20px;font-weight:300}
+.admin-note{margin:34px 0 0;color:var(--muted);font-size:10px;line-height:1.6}
+@media(max-width:700px){.admin-page{padding:24px 18px 40px}.admin-intro{grid-template-columns:1fr;padding:58px 0 48px}.admin-intro .eyebrow{grid-row:auto}.admin-card{grid-template-columns:32px 1fr auto;gap:12px}.admin-card-copy small{max-width:28em}}
