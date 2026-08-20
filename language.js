@@ -2,7 +2,7 @@
   const dictionaries = {
     en: {
       'Accueil': 'Home', 'Œuvres sélectionnées': 'Selected works', 'Installation, performance, textile et peinture.': 'Installation, performance, textile and painting.',
-      'Œuvres': 'Works', 'Projets': 'Projects', 'Biographie / CV': 'Biography / CV',
+      'Œuvres': 'Works', 'Boutique': 'Shop', 'Projets': 'Projects', 'Biographie / CV': 'Biography / CV',
       'Art · Vêtement · Corps · Mémoire': 'Art · Garment · Body · Memory',
       'Une pratique entre le vêtement, l’installation et la peinture.': 'A practice spanning garment, installation and painting.',
       'Formé entre la Chine et la France, Xing Zhou explore l’identité culturelle, la mémoire et les tensions entre tradition et modernité.': 'Educated in China and France, Xing Zhou explores cultural identity, memory, and the tensions between tradition and modernity.',
@@ -29,7 +29,7 @@
     },
     zh: {
       'Accueil': '首页', 'Œuvres sélectionnées': '精选作品', 'Installation, performance, textile et peinture.': '装置、行为、纺织与绘画。',
-      'Œuvres': '作品', 'Projets': '项目', 'Biographie / CV': '简介 / 履历', 'Contact': '联系',
+      'Œuvres': '作品', 'Boutique': '商店', 'Projets': '项目', 'Biographie / CV': '简介 / 履历', 'Contact': '联系',
       'Art · Vêtement · Corps · Mémoire': '艺术 · 服装 · 身体 · 记忆',
       'Une pratique entre le vêtement, l’installation et la peinture.': '游走于服装、装置与绘画之间的艺术实践。',
       'Formé entre la Chine et la France, Xing Zhou explore l’identité culturelle, la mémoire et les tensions entre tradition et modernité.': 'Xing Zhou 在中国与法国接受教育，创作聚焦文化身份、记忆，以及传统与现代之间的张力。',
@@ -103,6 +103,7 @@
       button.setAttribute('aria-pressed', String(button.dataset.lang === language));
     });
     localStorage.setItem('xing-language', language);
+    window.dispatchEvent(new CustomEvent('xing-language-change', { detail: { language } }));
   }
 
   setLanguage(localStorage.getItem('xing-language') || 'fr');

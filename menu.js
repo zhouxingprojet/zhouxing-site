@@ -6,6 +6,7 @@
   const links = [
     ['index.html', 'Accueil'],
     ['works.html', 'Œuvres'],
+    ['shop.html', 'Boutique'],
     ['portfolio.html', 'Projets'],
     ['Cv.html', 'Biographie / CV'],
     ['Contact.html', 'Contact']
