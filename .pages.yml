@@ -1,0 +1,91 @@
+media:
+  - name: product_images
+    label: 商品封面 / Product images
+    input: assets/products
+    output: /assets/products
+    extensions: [jpg, jpeg, png, webp]
+    rename: safe
+
+content:
+  - name: products
+    label: 商品 / Products
+    type: file
+    path: data/products.json
+    format: json
+    list:
+      min: 1
+      max: 100
+      collapsible:
+        collapsed: true
+        summary: "{title_zh} · {price}"
+    fields:
+      - name: id
+        label: 商品编号
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+      - name: order
+        label: 排序
+        type: number
+        required: true
+        options:
+          min: 1
+          max: 999
+      - name: published
+        label: 在网站显示
+        type: boolean
+        default: true
+      - name: status
+        label: 销售状态
+        type: select
+        required: true
+        options:
+          values:
+            - value: coming-soon
+              label: 即将上线
+            - value: available
+              label: 可以购买
+            - value: sold-out
+              label: 已售罄
+      - name: cover
+        label: 商品封面
+        type: image
+        required: true
+        options:
+          media: product_images
+      - name: title_zh
+        label: 中文名称
+        type: string
+        required: true
+      - name: title_en
+        label: English title
+        type: string
+        required: true
+      - name: title_fr
+        label: Titre français
+        type: string
+        required: true
+      - name: description_zh
+        label: 中文介绍
+        type: text
+      - name: description_en
+        label: English description
+        type: text
+      - name: description_fr
+        label: Description française
+        type: text
+      - name: price
+        label: 显示价格（例如 €20）
+        type: string
+        required: true
+      - name: format
+        label: 文件格式（例如 JPG · 6000 × 8000 px）
+        type: string
+      - name: checkout_url
+        label: Lemon Squeezy 购买链接
+        type: string
+        description: 商品在 Lemon Squeezy 上创建后，将 Checkout URL 粘贴到这里。
+
+settings:
+  content:
+    merge: true
