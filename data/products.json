@@ -3,7 +3,7 @@
     "id": "painting-01",
     "order": 1,
     "published": true,
-    "status": "coming-soon",
+    "status": "available",
     "cover": "blue-loops-1.jpg",
     "title_zh": "绘画",
     "title_en": "Painting",
@@ -13,6 +13,6 @@
     "description_fr": "Peinture originale.",
     "price": "€300",
     "format": "Original painting",
-    "checkout_url": ""
+    "checkout_url": "https://buy.stripe.com/3cI00ifA93hseDE6OxcfK00"
   }
 ]
