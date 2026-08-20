@@ -69,6 +69,8 @@
 
   const locale = document.querySelector('.locale');
   if (!locale) return;
+  const footer = document.querySelector('footer');
+  if (footer) footer.append(locale);
   locale.textContent = '';
   ['fr', 'en', 'zh'].forEach((language, index) => {
     if (index) {
