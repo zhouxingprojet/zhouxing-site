@@ -1,83 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Xing Zhou — visual artist. Installation and painting work exploring fashion, mortality, and gesture.">
-    <title>Xing Zhou</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Xing Zhou — artiste plasticien et styliste basé à Paris. Installation, performance et peinture.">
+  <title>Xing Zhou — Artiste</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="brand">
-            <img src="logo.png" alt="Xing Zhou logo">
-            <h1>Xing Zhou</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html" aria-current="page">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="Cv.html">Cv</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="site-header">
+    <a class="identity" href="index.html" aria-label="Xing Zhou, accueil"><span class="monogram">XZ</span><span>Xing Zhou<br><small>Artiste plasticien</small></span></a>
+    <nav aria-label="Navigation principale">
+      <a href="index.html" aria-current="page">Œuvres</a>
+      <a href="portfolio.html">Projets</a>
+      <a href="Cv.html">Biographie / CV</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+    <p class="locale">Paris · FR / EN / 中文</p>
+  </header>
 
-    <main>
-        <div class="hero-grid">
-            <div class="hero-image">
-                <img src="imag1.jpg" width="1080" height="1440" alt="ZHOU Xing, La mode et de la mort, 2023, installation view">
-            </div>
-            <div class="wall-label" lang="fr">
-                <span class="artist">Xing Zhou</span>
-                <i>La mode et de la mort</i>, 2023<br>
-                Installation<br>
-                Vue de l'exposition
-            </div>
-        </div>
+  <main>
+    <section class="intro" aria-labelledby="intro-title">
+      <p class="eyebrow">Art · Vêtement · Corps · Mémoire</p>
+      <h1 id="intro-title">Une pratique entre le vêtement, l’installation et la peinture.</h1>
+      <p>Formé entre la Chine et la France, Xing Zhou explore l’identité culturelle, la mémoire et les tensions entre tradition et modernité.</p>
+    </section>
 
-        <div class="mark-divider" aria-hidden="true">
-            <img src="logo.png" alt="">
-        </div>
+    <section class="work-grid" aria-label="Œuvres sélectionnées">
+      <a class="work-card work-tall" href="portfolio.html#mode-mort">
+        <figure><img src="imag1.jpg" alt="Installation La mode et la mort, structure métallique et vêtements blancs"><figcaption><span>La mode et la mort</span><span>2023 · Installation</span></figcaption></figure>
+      </a>
+      <a class="work-card work-wide" href="portfolio.html#performance">
+        <figure><img src="1.jpg" alt="Performance textile, figure enveloppée de tissu noir"><figcaption><span>Corps / Vêtement</span><span>Performance · Photographie</span></figcaption></figure>
+      </a>
+      <a class="work-card work-tall" href="portfolio.html#blue-loops">
+        <figure><img src="blue-loops-1.jpg" alt="Peinture abstraite de larges boucles bleues"><figcaption><span>Blue Loops I</span><span>2026 · Acrylique sur papier</span></figcaption></figure>
+      </a>
+    </section>
+  </main>
 
-        <article lang="fr">
-            <h2>La mode et la mort</h2>
-            <p>
-                Le projet parle de la mode et de la mort, inspiré d'un <i>dialogue de la mode et la mort</i> de
-                Giacomo Leopardi, un poète et philosophe italien. L'imagerie du vêtement dans la
-                poésie de Baudelaire n'est pas seulement une expression de la mélancolie et de la
-                mortalité, mais aussi une critique de la préoccupation excessive pour les apparences
-                dans la société moderne.
-            </p>
-        </article>
-
-        <div class="mark-divider" aria-hidden="true">
-            <img src="logo.png" alt="">
-        </div>
-
-        <div class="hero-grid">
-            <div class="hero-image">
-                <img src="blue-loops-1.jpg" width="1085" height="1450" alt="Xing ZHOU, Blue Loops I, 2026, acrylic on paper — sweeping blue brushstrokes intertwined in loops">
-            </div>
-            <div class="wall-label">
-                <span class="artist">Xing Zhou</span>
-                <i>Blue Loops I</i>, 2026<br>
-                Acrylic on paper<br>
-                60 &times; 80 cm
-            </div>
-        </div>
-
-        <article>
-            <p>
-                Layers of sweeping blue brushstrokes intertwine in an open rhythm,
-                exploring movement, repetition, and the quiet energy of gesture.
-            </p>
-        </article>
-    </main>
-
-    <footer>
-        <img src="logo.png" alt="">
-        <p>&copy; 2026 Xing Zhou</p>
-    </footer>
+  <footer><span>Xing Zhou</span><span>Paris, France</span><span>© 2026</span></footer>
 </body>
 </html>
