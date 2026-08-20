@@ -11,3 +11,5 @@ footer{max-width:1344px;margin:110px auto 30px;padding:18px 0;border-top:1px sol
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 .monogram{overflow:hidden;font-size:0}.monogram img{display:block;width:48px;height:36px;object-fit:contain}
 .monogram{width:44px;height:44px;background:transparent}.monogram img{width:34px;height:26px;filter:invert(1);mix-blend-mode:multiply}
+.locale{display:flex;justify-content:flex-end;align-items:center;gap:4px;margin:5px 0 0 14px}.lang-button{appearance:none;border:0;background:transparent;color:var(--muted);padding:5px 4px;font:500 9px/1 'DM Sans',Arial,sans-serif;letter-spacing:.08em;cursor:pointer}.lang-button:hover,.lang-button:focus-visible{color:var(--ink)}.lang-button[aria-pressed="true"]{color:var(--ink);text-decoration:underline;text-underline-offset:4px}.lang-separator{color:var(--line);font-size:9px}
+@media(max-width:850px){.locale{display:flex;justify-content:flex-start;margin:12px 0 0}}
