@@ -7,6 +7,7 @@
     ['index.html', 'Accueil'],
     ['works.html', 'Œuvres'],
     ['portfolio.html', 'Projets'],
+    ['x-art-lab.html', 'X-ART Lab'],
     ['Cv.html', 'Biographie / CV'],
     ['Contact.html', 'Contact'],
     ['shop.html', 'Boutique']
