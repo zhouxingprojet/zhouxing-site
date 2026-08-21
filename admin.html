@@ -1,51 +1,51 @@
 <!doctype html>
-<html lang="zh">
+<html lang="fr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <title>统一后台管理 — Xing Zhou</title>
-  <meta name="description" content="Xing Zhou 官网、文章与商城统一管理入口。">
+  <title>Administration unifiée — Xing Zhou</title>
+  <meta name="description" content="Administration unifiée du site, des articles et de la boutique Xing Zhou.">
   <link rel="stylesheet" href="styles.css?v=admin-1">
-  <link rel="stylesheet" href="admin.css?v=1">
+  <link rel="stylesheet" href="admin.css?v=2">
+  <script src="language.js?v=7" defer></script>
 </head>
 <body class="admin-body">
   <main class="admin-page">
     <header class="admin-header">
       <a class="admin-brand" href="index.html"><img src="logo.png" alt=""><span>Xing Zhou</span></a>
-      <a class="admin-back" href="index.html">返回网站 ↗</a>
+      <div class="admin-tools">
+        <p class="locale">FR / EN / 中文</p>
+        <a class="admin-back" href="index.html">Retour au site</a>
+      </div>
     </header>
 
     <section class="admin-intro">
       <p class="eyebrow">Administration</p>
-      <h1>统一后台管理</h1>
-      <p>从这里统一管理 X-ART Lab 文章、商店商品、客户订单和官网文件。各项登录验证由对应的安全后台完成，本页面不保存密码。</p>
+      <h1>Administration unifiée</h1>
+      <p>Gérez ici les articles de X-ART Lab, les produits de la boutique, les clients, les commandes et les fichiers du site. Chaque service assure sa propre connexion sécurisée ; aucun mot de passe n’est conservé sur cette page.</p>
     </section>
 
-    <section class="admin-links" aria-label="管理工具">
+    <section class="admin-links" aria-label="Outils d’administration">
       <a class="admin-card" href="https://x-art-lab.pages.dev/admin" target="_blank" rel="noopener">
         <span class="admin-number">01</span>
-        <span class="admin-card-copy"><strong>文章发布</strong><small>添加、编辑和删除 X-ART Lab 的法语、英语及中文文章</small></span>
-        <span class="admin-arrow">↗</span>
+        <span class="admin-card-copy"><strong>Publication des articles</strong><small>Ajouter, modifier et supprimer les articles de X-ART Lab en français, anglais et chinois</small></span>
       </a>
       <a class="admin-card" href="https://app.pagescms.org/zhouxingprojet/zhouxing-site/main/file/products" target="_blank" rel="noopener">
         <span class="admin-number">02</span>
-        <span class="admin-card-copy"><strong>网站与商店商品</strong><small>图片、名称、介绍、价格、销售状态和付款链接</small></span>
-        <span class="admin-arrow">↗</span>
+        <span class="admin-card-copy"><strong>Site et produits de la boutique</strong><small>Images, titres, descriptions, prix, disponibilité et liens de paiement</small></span>
       </a>
       <a class="admin-card" href="https://dashboard.stripe.com/" target="_blank" rel="noopener">
         <span class="admin-number">03</span>
-        <span class="admin-card-copy"><strong>客户、订阅与订单</strong><small>付款、订阅、客户资料、订单和退款</small></span>
-        <span class="admin-arrow">↗</span>
+        <span class="admin-card-copy"><strong>Clients, abonnements et commandes</strong><small>Paiements, abonnements, informations clients, commandes et remboursements</small></span>
       </a>
       <a class="admin-card" href="https://github.com/zhouxingprojet/zhouxing-site" target="_blank" rel="noopener">
         <span class="admin-number">04</span>
-        <span class="admin-card-copy"><strong>网站文件</strong><small>GitHub 仓库、版本记录和部署状态</small></span>
-        <span class="admin-arrow">↗</span>
+        <span class="admin-card-copy"><strong>Fichiers du site</strong><small>Dépôt GitHub, historique des versions et état du déploiement</small></span>
       </a>
     </section>
 
-    <p class="admin-note">请勿向任何人透露后台、GitHub 或 Stripe 密码及验证码。</p>
+    <p class="admin-note">Ne communiquez jamais vos mots de passe ni vos codes de vérification pour l’administration, GitHub ou Stripe.</p>
   </main>
 </body>
 </html>
