@@ -151,3 +151,19 @@ body,.intro h1,.page-title h1,.contact-page h1,.project-copy h2,.project-copy>p:
 .interactive-preview img{animation:poor-image-signal 5s steps(1,end) infinite}
 .interactive-work-cover img{animation:poor-image-signal 7s steps(1,end) infinite}
 @media(max-width:850px){.interactive-work-intro{display:block;padding:15px 0 22px}.interactive-work-intro h1{font-size:28px}.interactive-work-intro p{margin-top:10px;text-align:left}.interactive-work-cover img{min-height:60svh;object-fit:cover}}
+
+/* Light site polish */
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+.site-header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+a:focus-visible,button:focus-visible{outline:1px solid var(--ink);outline-offset:5px}
+.work-card{transition:transform .25s ease,box-shadow .25s ease}
+.work-card:hover,.work-card:focus-visible{transform:translateY(-3px);box-shadow:0 7px 18px rgba(0,0,0,.06)}
+@media(min-width:701px) and (max-width:900px){
+  .work-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 8px}
+  .work-tall,.work-wide{grid-column:auto}
+  .work-digital{grid-column:1/-1}
+  .work-card img{height:52vw;max-height:520px}
+  .interactive-preview{height:54vw;max-height:620px}
+}
+@media(max-width:700px){.work-grid{grid-template-columns:1fr}.work-card{grid-column:auto}.work-digital{grid-column:auto}.site-header{backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px)}}
+@media(prefers-reduced-motion:reduce){.interactive-preview img,.interactive-work-cover img{animation:none}.work-card{transition:none}}
