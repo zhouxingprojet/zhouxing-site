@@ -1,56 +1,35 @@
 <!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>POOR IMAGE / VISUAL BOND</title>
-    <meta name="description" content="A p5.js study of poor images, compression, circulation and visual bonds." />
-    <link rel="stylesheet" href="poor-image.css" />
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.min.js"></script>
-  </head>
-  <body>
-    <main id="stage" aria-label="Poor Image interactive animation">
-      <div id="canvas-wrap"></div>
-      <header class="hud hud--top">
-        <span>POOR IMAGE LAB</span>
-        <span id="status">SIGNAL: UNSTABLE</span>
-        <span>ISSUE 10 / 2009—∞</span>
-      </header>
-      <section class="title" aria-hidden="true">
-        <h1>POOR<br />IMAGE</h1>
-        <p>COPY IN MOTION / DIGITAL CAMOUFLAGE</p>
-      </section>
-      <div class="readout" aria-hidden="true">
-        <span>RESOLUTION</span><b id="resolution-value">18%</b>
-        <span>CIRCULATION</span><b id="circulation-value">82%</b>
-      </div>
-      <section class="work-statement" aria-labelledby="work-title">
-        <span>INTERACTIVE WORK / 2026</span>
-        <h2 id="work-title">Poor Image / Visual Bond</h2>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Poor Image / Visual Bond — an interactive work by Xing Zhou.">
+  <title>Poor Image / Visual Bond — Xing Zhou</title>
+  <link rel="stylesheet" href="styles.css?v=7">
+  <script src="menu.js?v=1" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="identity" href="index.html"><span class="monogram"><img src="logo.png" alt=""></span><span>Xing Zhou</span></a>
+    <nav aria-label="Primary navigation"></nav>
+  </header>
+  <main class="interactive-work-page">
+    <section class="interactive-work-intro" aria-labelledby="poor-image-title">
+      <p class="eyebrow">Interactive work · p5.js · 2026</p>
+      <div>
+        <h1 id="poor-image-title">Poor Image<br>/ Visual Bond</h1>
         <p>An interactive study of images that lose resolution as they gain circulation. Compression, glitches, copying and swarm behavior turn the screen into a contested network—where visibility, speed and power continually change places.</p>
-      </section>
-      <aside class="controls" aria-label="Animation controls">
-        <label>
-          <span>DEGRADATION</span>
-          <input id="degradation" type="range" min="0" max="100" value="42" />
-        </label>
-        <label>
-          <span>SWARM DENSITY</span>
-          <input id="density" type="range" min="20" max="120" value="64" />
-        </label>
-        <div class="control-buttons">
-          <button id="propagate" type="button">PROPAGATE</button>
-          <button id="mode" type="button">MODE: CONFLICT</button>
-          <button id="freeze" type="button">FREEZE</button>
-        </div>
-      </aside>
-      <footer class="hud hud--bottom">
-        <span>DRAG: TEAR IMAGE</span>
-        <span>CLICK: PROPAGATE / WHEEL: RESOLUTION</span>
-        <span>SPACE: FREEZE</span>
-        <span>S: SAVE FRAME</span>
-      </footer>
-    </main>
-    <script src="poor-image.js"></script>
-  </body>
+      </div>
+      <dl>
+        <div><dt>Medium</dt><dd>Browser-based interactive animation</dd></div>
+        <div><dt>Interaction</dt><dd>Move, drag, click and scroll</dd></div>
+      </dl>
+    </section>
+    <section class="interactive-work-stage" aria-label="Interactive artwork">
+      <iframe src="poor-image-player.html" title="Poor Image / Visual Bond interactive artwork" allowfullscreen></iframe>
+      <a href="poor-image-player.html">Enter full screen ↗</a>
+    </section>
+  </main>
+  <footer><span>Xing Zhou</span><span>Paris, France</span><span>© 2026</span></footer>
+</body>
 </html>
