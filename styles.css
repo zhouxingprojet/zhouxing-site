@@ -146,4 +146,8 @@ body,.intro h1,.page-title h1,.contact-page h1,.project-copy h2,.project-copy>p:
 .interactive-work-cover>span{position:absolute;right:12px;bottom:12px;padding:9px 11px;background:#f2f2ed;color:#080808;text-transform:uppercase;font-size:8px;font-weight:500;letter-spacing:.12em}
 .interactive-work-cover:hover img{transform:scale(1.008);opacity:.94}
 .interactive-work-cover:hover>span{background:#d8ff4f}
+@keyframes poor-image-signal{0%,100%{filter:grayscale(1) contrast(1);transform:translateX(0)}48%{filter:grayscale(1) contrast(1.08);transform:translateX(0)}49%{transform:translateX(-4px)}50%{transform:translateX(3px)}51%{transform:translateX(0)}}
+.interactive-preview::after{content:'';position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0,rgba(255,255,255,.04) 1px,transparent 1px,transparent 4px);mix-blend-mode:screen}
+.interactive-preview img{animation:poor-image-signal 5s steps(1,end) infinite}
+.interactive-work-cover img{animation:poor-image-signal 7s steps(1,end) infinite}
 @media(max-width:850px){.interactive-work-intro{display:block;padding:15px 0 22px}.interactive-work-intro h1{font-size:28px}.interactive-work-intro p{margin-top:10px;text-align:left}.interactive-work-cover img{min-height:60svh;object-fit:cover}}
