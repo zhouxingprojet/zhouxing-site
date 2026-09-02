@@ -27,7 +27,9 @@ html, body {
 
 #stage { position: relative; isolation: isolate; }
 #stage, #canvas-wrap, canvas { touch-action: none; }
-#canvas-wrap { position: absolute; inset: 0; z-index: -1; }
+#canvas-wrap { position: absolute; inset: 0; z-index: 0; }
+#stage { position: relative; z-index: 1; pointer-events: none; }
+#stage .controls, #stage button, #stage input, #stage label, #stage a { pointer-events: auto; }
 
 .hud {
   position: absolute;
