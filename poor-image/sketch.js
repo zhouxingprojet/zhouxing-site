@@ -23,6 +23,7 @@ let touchPrevY = 0;
 function setup() {
   const canvas = createCanvas(windowWidth, windowHeight);
   canvas.parent('canvas-wrap');
+  installPointerInteraction();
   pixelDensity(1);
   frameRate(30);
   noCursor();
@@ -345,6 +346,34 @@ function touchMoved() {
 function touchEnded() {
   touchActive = false;
   return false;
+}
+
+function installPointerInteraction() {
+  let pointerDown = false;
+  const blocked = event => event.target.closest('.controls, button, input, label, a');
+  document.addEventListener('pointerdown', event => {
+    if (blocked(event) || event.pointerType === 'mouse') return;
+    pointerDown = touchActive = true;
+    touchX = touchPrevX = event.clientX;
+    touchY = touchPrevY = event.clientY;
+    propagateAt(touchX, touchY);
+    event.preventDefault();
+  }, { passive: false, capture: true });
+  document.addEventListener('pointermove', event => {
+    if (!pointerDown || event.pointerType === 'mouse') return;
+    touchPrevX = touchX; touchPrevY = touchY;
+    touchX = event.clientX; touchY = event.clientY;
+    distortionTarget = constrain(distortionTarget + dist(touchX, touchY, touchPrevX, touchPrevY) * 0.002, 0, 1);
+    pulse = min(1, pulse + 0.08);
+    event.preventDefault();
+  }, { passive: false, capture: true });
+  const finish = event => {
+    if (!pointerDown) return;
+    pointerDown = touchActive = false;
+    if (event) event.preventDefault();
+  };
+  document.addEventListener('pointerup', finish, { passive: false, capture: true });
+  document.addEventListener('pointercancel', finish, { passive: false, capture: true });
 }
 
 function keyPressed() {
