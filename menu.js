@@ -6,6 +6,7 @@
   const links = [
     ['index.html', 'Accueil'],
     ['works.html', 'Œuvres'],
+    ['generative-works.html', 'Generative Works'],
     ['portfolio.html', 'Projets'],
     ['graphic-design.html', 'Design graphique'],
     ['x-art-lab.html', 'X-ART Lab'],
