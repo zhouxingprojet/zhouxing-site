@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>POOR IMAGE / VISUAL BOND</title>
+    <meta name="description" content="A p5.js study of poor images, compression, circulation and visual bonds." />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.8/lib/p5.min.js"></script>
+  </head>
+  <body>
+    <main id="stage" aria-label="Poor Image interactive animation">
+      <div id="canvas-wrap"></div>
+      <header class="hud hud--top">
+        <span>POOR IMAGE LAB</span>
+        <span id="status">SIGNAL: UNSTABLE</span>
+        <span>ISSUE 10 / 2009—∞</span>
+      </header>
+      <section class="title" aria-hidden="true">
+        <h1>POOR<br />IMAGE</h1>
+        <p>COPY IN MOTION / DIGITAL CAMOUFLAGE</p>
+      </section>
+      <div class="readout" aria-hidden="true">
+        <span>RESOLUTION</span><b id="resolution-value">18%</b>
+        <span>CIRCULATION</span><b id="circulation-value">82%</b>
+      </div>
+      <aside class="controls" aria-label="Animation controls">
+        <label>
+          <span>DEGRADATION</span>
+          <input id="degradation" type="range" min="0" max="100" value="42" />
+        </label>
+        <label>
+          <span>SWARM DENSITY</span>
+          <input id="density" type="range" min="20" max="120" value="64" />
+        </label>
+        <div class="control-buttons">
+          <button id="propagate" type="button">PROPAGATE</button>
+          <button id="mode" type="button">MODE: CONFLICT</button>
+          <button id="freeze" type="button">FREEZE</button>
+        </div>
+      </aside>
+      <footer class="hud hud--bottom">
+        <span>DRAG: TEAR IMAGE</span>
+        <span>TAP: PROPAGATE / SWIPE: TEAR</span>
+        <span>SPACE: FREEZE</span>
+        <span>S: SAVE FRAME</span>
+      </footer>
+    </main>
+    <script src="sketch.js"></script>
+  </body>
+</html>
