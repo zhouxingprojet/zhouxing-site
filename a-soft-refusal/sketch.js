@@ -2,7 +2,7 @@
 const DUR=[12,14,14,13,12,17],TOTAL=DUR.reduce((a,b)=>a+b,0);
 const STATES=[['fragile clarity','Before the image learns what you want, it can still tremble without purpose.'],['attraction / capture','Attention bends toward whatever glows. The glow begins to bend back.'],['the loop remembers','Image becomes view. View becomes data. Data returns disguised as desire.'],['loss of outline','Copied enough times, the image survives by becoming less itself.'],['a necessary friction','Do not feed the current. Hold still. Let the machine encounter a pause.'],['agency, slowly','Not escape—an interval. Enough room to choose the next gesture.']];
 let motes=[],echoes=[],started,paused=false,soundOn=false,audio,master,pad=[],noiseNode,pulseTimer,lastMove=0,stillness=0,prevState=-1,currentState=0;
-function setup(){createCanvas(windowWidth,windowHeight);pixelDensity(1);colorMode(RGB,255,255,255,255);started=millis();for(let i=0;i<180;i++)motes.push(new Mote());bindUI();createSoundGate()}
+function setup(){createCanvas(windowWidth,windowHeight);pixelDensity(1);colorMode(RGB,255,255,255,255);started=millis();for(let i=0;i<180;i++)motes.push(new Mote());bindUI();createSoundGate();installPointerInteraction()}
 function windowResized(){resizeCanvas(windowWidth,windowHeight)}
 function bindUI(){select('#pause').mousePressed(()=>{paused=!paused;paused?noLoop():loop();select('#pause').html(paused?'▶':'Ⅱ')});select('#restart').mousePressed(()=>{started=millis();echoes=[];stillness=0;loop()});select('#sound').mousePressed(()=>{soundOn=!soundOn;select('#sound').style('color',soundOn?'#e8ff8a':'#f4f0e8');soundOn?startMusic():stopMusic()})}
 function createSoundGate(){let gate=createDiv().id('soundGate').class('sound-gate'),button=createButton('<span class="ring">♪</span><strong>enter with sound</strong><small>headphones recommended</small>').class('enter');button.parent(gate);button.mousePressed(()=>{soundOn=true;startMusic();select('#sound').style('color','#e8ff8a');gate.addClass('hidden');setTimeout(()=>gate.remove(),1300)})}
@@ -19,6 +19,22 @@ function touchBurst(x,y,count=8){lastMove=millis();for(let i=0;i<count;i++)echoe
 function touchStarted(){if(touches.length)touchBurst(touches[0].x,touches[0].y,12);return false}
 function touchMoved(){if(touches.length&&frameCount%2===0)touchBurst(touches[0].x,touches[0].y,3);lastMove=millis();return false}
 function touchEnded(){lastMove=millis();return false}
+function installPointerInteraction(){
+  let drawing=false,lastX=0,lastY=0;
+  const blocked=e=>e.target.closest('button,.controls,.sound-gate');
+  document.addEventListener('pointerdown',e=>{
+    if(blocked(e)||e.pointerType==='mouse')return;
+    drawing=true;lastX=e.clientX;lastY=e.clientY;touchBurst(lastX,lastY,14);e.preventDefault();
+  },{passive:false,capture:true});
+  document.addEventListener('pointermove',e=>{
+    if(!drawing||e.pointerType==='mouse')return;
+    const d=dist(e.clientX,e.clientY,lastX,lastY);
+    if(d>5){touchBurst(e.clientX,e.clientY,5);lastX=e.clientX;lastY=e.clientY}
+    e.preventDefault();
+  },{passive:false,capture:true});
+  document.addEventListener('pointerup',e=>{if(drawing){drawing=false;lastMove=millis();e.preventDefault()}},{passive:false,capture:true});
+  document.addEventListener('pointercancel',()=>{drawing=false},{capture:true});
+}
 class Mote{constructor(){this.reset()}reset(){this.x=random(width);this.y=random(height);this.v=random(.15,.8);this.sz=random(1,3)}run(s,t,m){let cx=mouseX||width/2,cy=mouseY||height/2,ang=noise(this.x*.003,this.y*.003,millis()*.00008)*TAU*2;if(s===1||s===2)ang=lerp(ang,atan2(cy-this.y,cx-this.x),s===1?.035:.12);if(s===5)ang=lerp(ang,atan2(height*.48-this.y,width*.5-this.x),.025*t);this.x+=cos(ang)*this.v*(s>=2?3:1);this.y+=sin(ang)*this.v*(s>=2?3:1);if(this.x<0||this.x>width||this.y<0||this.y>height)this.reset();let alpha=s===3?random(8,80):s===5?lerp(15,95,t):35;stroke(s===5?232:130,s===5?255:190,s===5?138:220,alpha);strokeWeight(this.sz);point(this.x,this.y)}}
 function startMusic(){
   if(audio){audio.resume();master.gain.setTargetAtTime(.32,audio.currentTime,.7);return}
