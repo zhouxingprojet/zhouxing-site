@@ -14,7 +14,8 @@
       'Dépôt GitHub, historique des versions et état du déploiement': 'GitHub repository, version history, and deployment status',
       'Ne communiquez jamais vos mots de passe ni vos codes de vérification pour l’administration, GitHub ou Stripe.': 'Never share your administration, GitHub, or Stripe passwords or verification codes.',
       'Accueil': 'Home', 'Voir le projet': 'View project', 'Faire défiler': 'Scroll', 'Œuvres sélectionnées': 'Selected works', 'Installation, performance, textile et peinture.': 'Installation, performance, textile and painting.',
-      'Œuvres': 'Works', 'Boutique': 'Shop', 'Projets': 'Projects', 'Design graphique': 'Graphic Design', 'Biographie / CV': 'Biography / CV',
+      'Œuvres': 'Works', 'Boutique': 'Shop', 'Projets': 'Projects', 'Design graphique': 'Graphic Design', 'Biographie / CV': 'Biography / CV', 'À propos / CV': 'About / CV', 'À propos': 'About',
+      'Artiste plasticien et styliste basé à Paris.': 'Visual artist and fashion designer based in Paris.',
       'Identité de marque · Design éditorial · Publication numérique': 'Brand identity · Editorial design · Digital publishing',
       'Application web créative': 'Creative web application',
       'Plateforme de recherche artistique': 'Art research platform',
@@ -75,7 +76,8 @@
       'Dépôt GitHub, historique des versions et état du déploiement': 'GitHub 仓库、版本记录和部署状态',
       'Ne communiquez jamais vos mots de passe ni vos codes de vérification pour l’administration, GitHub ou Stripe.': '请勿向任何人透露后台、GitHub 或 Stripe 密码及验证码。',
       'Accueil': '首页', 'Voir le projet': '查看项目', 'Faire défiler': '向下浏览', 'Œuvres sélectionnées': '精选作品', 'Installation, performance, textile et peinture.': '装置、行为、纺织与绘画。',
-      'Œuvres': '作品', 'Boutique': '商店', 'Projets': '项目', 'Design graphique': '平面设计', 'Biographie / CV': '简介 / 履历', 'Contact': '联系',
+      'Œuvres': '作品', 'Boutique': '商店', 'Projets': '项目', 'Design graphique': '平面设计', 'Biographie / CV': '简介 / 履历', 'À propos / CV': '关于 / 履历', 'À propos': '关于', 'Contact': '联系',
+      'Artiste plasticien et styliste basé à Paris.': '居住在巴黎的视觉艺术家与服装设计师。',
       'Identité de marque · Design éditorial · Publication numérique': '品牌识别 · 编辑设计 · 数字出版',
       'Application web créative': '创意网页应用',
       'Plateforme de recherche artistique': '艺术研究平台',
@@ -139,8 +141,6 @@
 
   const locale = document.querySelector('.locale');
   if (!locale) return;
-  const footer = document.querySelector('footer');
-  if (footer) footer.append(locale);
   locale.textContent = '';
   ['fr', 'en', 'zh'].forEach((language, index) => {
     if (index) {
