@@ -149,23 +149,18 @@ body,.intro h1,.page-title h1,.contact-page h1,.project-copy h2,.project-copy>p:
   .home-actions{margin-top:24px}
   .featured-work{width:100%}
 }
-/* Homepage footer: keep the identity cluster in the lower-right corner */
-.home-page .site-header{min-height:82px;justify-content:flex-end}
+/* Homepage footer: restore the logo and keep a single footer row */
+.home-page .site-header{min-height:82px;justify-content:space-between}
 .home-page .site-header .menu-toggle{position:static;order:3}
 .home-page .site-header nav{top:64px;right:0}
-.home-page .home-footer{align-items:flex-end;padding:18px 48px}
-.home-page .footer-meta{display:flex;gap:24px}
-.home-page .footer-links{margin-left:auto;display:grid;justify-items:end;gap:8px;text-align:right}
-.home-page .footer-identity{display:block;text-align:right;text-decoration:none}
-.home-page .footer-identity .identity-copy{display:grid;gap:4px}
-.home-page .footer-identity strong{font-size:13px;font-weight:500;line-height:1.1}
-.home-page .footer-identity small{font-size:9px;letter-spacing:.1em;color:var(--muted);line-height:1.1}
-.home-page .footer-instagram{display:inline-flex;align-items:center;gap:6px;text-decoration:none;text-transform:uppercase;letter-spacing:.1em;font-size:10px;color:var(--ink)}
+.home-page .home-footer{align-items:center;gap:18px;padding:18px 48px}
+.home-page .footer-copyright,.home-page .footer-instagram,.home-page .home-footer .locale{flex:1}
+.home-page .footer-copyright{display:block}
+.home-page .footer-instagram{display:inline-flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;text-transform:uppercase;letter-spacing:.1em;font-size:10px;color:var(--ink);white-space:nowrap}
 .home-page .footer-instagram span{font-size:13px;line-height:1;transition:transform .2s ease}
 .home-page .footer-instagram:hover span,.home-page .footer-instagram:focus-visible span{transform:translate(3px,-2px)}
-.home-page .footer-links .locale{margin:0;justify-content:flex-end}
+.home-page .home-footer .locale{margin:0;justify-content:flex-end}
 @media(max-width:850px){
   .home-page .site-header{min-height:82px}
-  .home-page .home-footer{align-items:flex-end;padding:18px 16px}
-  .home-page .footer-links{gap:7px}
+  .home-page .home-footer{gap:10px;padding:18px 16px}
 }
