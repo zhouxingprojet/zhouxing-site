@@ -193,3 +193,13 @@ body.menu-is-open{overflow:hidden}
   .site-header.menu-open .menu-footer .menu-instagram{gap:5px}
   .site-header.menu-open .menu-footer .instagram-icon{width:12px;height:12px}
 }
+
+
+
+/* Final header cleanup */
+.site-header .menu-footer{display:none}
+.site-header.menu-open .menu-footer{display:flex}
+.site-header.menu-open nav a{font-size:clamp(22px,3vw,46px);line-height:1;padding:5px 12px}
+@media(max-width:850px){
+  .site-header.menu-open nav a{font-size:clamp(22px,7vw,36px)}
+}
