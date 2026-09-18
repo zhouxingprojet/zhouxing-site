@@ -165,3 +165,31 @@ body,.intro h1,.page-title h1,.contact-page h1,.project-copy h2,.project-copy>p:
   .home-page .site-header{min-height:82px}
   .home-page .home-footer{gap:10px;padding:18px 16px}
 }
+
+/* Full-screen navigation overlay */
+body.menu-is-open{overflow:hidden}
+.site-header.menu-open{position:fixed;inset:0;z-index:1000;width:100%;max-width:none;height:100svh;min-height:100svh;margin:0;padding:28px 48px 24px;display:block;background:var(--paper);color:var(--ink);border:0}
+.site-header.menu-open .identity{position:absolute;top:28px;left:48px;z-index:2}
+.site-header.menu-open>.locale{display:none}
+.site-header.menu-open .menu-toggle{position:absolute;top:24px;right:48px;z-index:2;width:42px;height:42px;padding:9px}
+.site-header.menu-open .menu-toggle span{width:24px;height:1.5px}
+.site-header.menu-open nav{position:absolute;inset:0;z-index:1;width:auto;height:auto;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:clamp(10px,1.8vh,22px);padding:120px 24px 110px;background:transparent;border:0;opacity:1;visibility:visible;transform:none;overflow:auto}
+.site-header.menu-open nav a{padding:6px 12px;border:0;color:var(--ink);font-size:clamp(24px,4vw,58px);font-weight:400;line-height:1.05;letter-spacing:-.04em;text-transform:none;white-space:nowrap}
+.site-header.menu-open nav a:hover,.site-header.menu-open nav a:focus-visible,.site-header.menu-open nav a[aria-current=page]{color:var(--ink)}
+.site-header.menu-open nav a[aria-current=page]::before{content:none}
+.site-header.menu-open .menu-footer{position:absolute;left:48px;right:48px;bottom:24px;z-index:2;display:flex;align-items:center;gap:18px;border-top:1px solid var(--line);padding-top:16px;text-transform:uppercase;letter-spacing:.1em;font-size:9px;color:var(--muted)}
+.site-header.menu-open .menu-footer>*{flex:1}
+.site-header.menu-open .menu-footer .menu-instagram{display:inline-flex;align-items:center;justify-content:center;gap:7px;color:var(--ink);text-decoration:none;white-space:nowrap}
+.site-header.menu-open .menu-footer .instagram-icon{display:block;width:13px;height:13px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.site-header.menu-open .menu-footer .instagram-dot{fill:currentColor;stroke:none}
+.site-header.menu-open .menu-footer .locale{margin:0;justify-content:flex-end}
+@media(max-width:850px){
+  .site-header.menu-open{padding:20px 16px 18px}
+  .site-header.menu-open .identity{top:20px;left:16px}
+  .site-header.menu-open .menu-toggle{top:16px;right:16px}
+  .site-header.menu-open nav{gap:8px;padding:96px 16px 112px}
+  .site-header.menu-open nav a{font-size:clamp(24px,8vw,42px)}
+  .site-header.menu-open .menu-footer{left:16px;right:16px;bottom:16px;gap:8px;padding-top:12px;font-size:8px}
+  .site-header.menu-open .menu-footer .menu-instagram{gap:5px}
+  .site-header.menu-open .menu-footer .instagram-icon{width:12px;height:12px}
+}
