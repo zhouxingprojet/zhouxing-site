@@ -1,6 +1,6 @@
 (() => {
   const style = document.createElement('style');
-  style.textContent = "
+  style.textContent = `
 
 /* Unified header language controls and footer */
 .site-header .header-actions{display:flex;align-items:center;gap:12px;margin-left:auto}
@@ -27,7 +27,7 @@ footer .footer-instagram .instagram-dot{fill:currentColor;stroke:none}
   footer{flex-wrap:nowrap;gap:12px}
   footer .footer-instagram{width:24px}
 }
-";
+`;
   document.head.append(style);
   const header = document.querySelector('.site-header');
   const nav = header?.querySelector('nav');
