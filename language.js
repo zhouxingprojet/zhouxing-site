@@ -1,7 +1,7 @@
 (() => {
   const dictionaries = {
     en: {
-      'Accueil': 'Home', 'Contact': 'Contact', 'Boutique': 'Shop', 'Design graphique': 'Graphic design', 'X-ART Lab': 'X-ART Lab', 'Éditions numériques': 'Digital editions', 'Peinture': 'Painting', 'Peinture originale': 'Original painting', 'Boucles bleues I': 'Blue Loops I', 'Résonance noire': 'Black Resonance', 'Bientôt disponible': 'Coming soon', 'Aucune œuvre disponible.': 'No works available.', 'Acheter': 'Purchase', 'Épuisé': 'Sold out',
+      'Accueil': 'Home', 'Contact': 'Contact', 'Boutique': 'Shop', 'Design graphique': 'Graphic design', 'X-ART Lab': 'X-ART Lab', 'Éditions numériques': 'Digital editions', 'Produits numériques': 'Digital products', 'Peinture': 'Painting', 'Peinture originale': 'Original painting', 'Boucles bleues I': 'Blue Loops I', 'Résonance noire': 'Black Resonance', 'Bientôt disponible': 'Coming soon', 'Aucune œuvre disponible.': 'No works available.', 'Acheter': 'Purchase', 'Épuisé': 'Sold out',
       'Des gestes noirs superposés forment un champ d’anneaux en rotation, explorant la tension entre le corps, le mouvement et l’espace.': 'Overlapping black gestures form a field of rotating rings, exploring the tension between body, movement, and space.',
 
       'Œuvres': 'Works', 'Projets': 'Projects', 'Biographie / CV': 'Biography / CV',
@@ -30,7 +30,7 @@
       'Téléphone': 'Phone', 'Lieu': 'Location'
     },
     zh: {
-      'Accueil': '首页', 'Contact': '联系', 'Boutique': '商店', 'Design graphique': '平面设计', 'X-ART Lab': 'X-ART Lab', 'Éditions numériques': '数字作品', 'Peinture': '绘画', 'Peinture originale': '原创绘画', 'Boucles bleues I': '蓝色回旋 I', 'Blue Loops I': '蓝色回旋 I', 'Résonance noire': '黑色回响', 'Black Resonance': '黑色回响', 'Bientôt disponible': '即将上线', 'Aucune œuvre disponible.': '暂无可购买作品。', 'Acheter': '购买', 'Épuisé': '已售罄',
+      'Accueil': '首页', 'Contact': '联系', 'Boutique': '商店', 'Design graphique': '平面设计', 'X-ART Lab': 'X-ART Lab', 'Éditions numériques': '数字作品', 'Produits numériques': '数字作品', 'Original painting': '原创绘画', 'Peinture': '绘画', 'Peinture originale': '原创绘画', 'Boucles bleues I': '蓝色回旋 I', 'Blue Loops I': '蓝色回旋 I', 'Résonance noire': '黑色回响', 'Black Resonance': '黑色回响', 'Bientôt disponible': '即将上线', 'Aucune œuvre disponible.': '暂无可购买作品。', 'Acheter': '购买', 'Épuisé': '已售罄',
       'Des gestes noirs superposés forment un champ d’anneaux en rotation, explorant la tension entre le corps, le mouvement et l’espace.': '黑色笔触彼此交叠成旋转的环形结构，探索身体、动作与空间之间的张力。',
 
       'Œuvres': '作品', 'Projets': '项目', 'Biographie / CV': '简介 / 履历', 'Contact': '联系',
