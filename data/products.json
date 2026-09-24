@@ -14,5 +14,20 @@
     "price": "€300",
     "format": "Original painting",
     "checkout_url": "https://buy.stripe.com/3cI00ifA93hseDE6OxcfK00"
+  },
+  {
+    "id": "black-resonance-01",
+    "order": 2,
+    "published": true,
+    "status": "available",
+    "cover": "/assets/products/11471790258062pichd.jpg",
+    "title_zh": "黑色回响",
+    "title_en": "Black Resonance",
+    "title_fr": "Résonance noire",
+    "description_zh": "以黑色笔触交叠成旋转的环形结构，探索身体、动作与空间之间的张力。",
+    "description_en": "Overlapping black gestures form a field of rotating rings, exploring the tension between body, movement and space.",
+    "description_fr": "Des gestes noirs superposés forment un champ d’anneaux en rotation, explorant la tension entre le corps, le mouvement et l’espace.",
+    "price": "€300",
+    "format": "JPG · 1148 × 1536 px"
   }
 ]
