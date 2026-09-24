@@ -31,11 +31,12 @@
       const available = status === 'available' && product.checkout_url;
       const button = available ? labels.buy : status === 'sold-out' ? labels.sold : labels.soon;
       const badge = status === 'sold-out' ? `<span class="product-badge">${labels.sold}</span>` : '';
+      const meta = product.format ? `<p class="product-meta">${safe(product.format)}</p>` : '';
       return `<article class="product-card">
         <div class="product-image"><img src="${safe(product.cover || '1.jpg')}" alt="${safe(title)}" loading="lazy">${badge}</div>
         <div class="product-info">
           <div class="product-heading"><h2>${safe(title)}</h2><span class="product-price">${safe(product.price || '')}</span></div>
-          <p class="product-meta">${safe(product.format || 'Digital edition')}</p>
+          ${meta}
           <p class="product-description">${safe(description)}</p>
           <a class="buy-button" href="${available ? safe(product.checkout_url) : '#'}" ${available ? 'target="_blank" rel="noopener"' : 'aria-disabled="true"'}>${button}</a>
         </div>
