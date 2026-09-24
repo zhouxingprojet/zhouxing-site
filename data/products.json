@@ -12,7 +12,9 @@
     "description_en": "Blue gestures cross and return to themselves. Repetition builds an open space where movement, rhythm, and silent energy remain visible.",
     "description_fr": "Des gestes bleus se croisent et reviennent sur eux-mêmes. La répétition construit un espace ouvert où mouvement, rythme et énergie silencieuse restent visibles.",
     "price": "€300",
-    "format": "Original painting",
+    "format_zh": "原创绘画",
+    "format_en": "Original painting",
+    "format_fr": "Peinture originale",
     "checkout_url": "https://buy.stripe.com/3cI00ifA93hseDE6OxcfK00"
   },
   {
