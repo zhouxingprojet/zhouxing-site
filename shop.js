@@ -27,11 +27,12 @@
     grid.innerHTML = visible.map(product => {
       const title = localized(product, 'title', lang);
       const description = localized(product, 'description', lang);
+      const format = product[`format_${lang}`] || product.format || '';
       const status = product.status || 'coming-soon';
       const available = status === 'available' && product.checkout_url;
       const button = available ? labels.buy : status === 'sold-out' ? labels.sold : labels.soon;
       const badge = status === 'sold-out' ? `<span class="product-badge">${labels.sold}</span>` : '';
-      const meta = product.format ? `<p class="product-meta">${safe(product.format)}</p>` : '';
+      const meta = format ? `<p class="product-meta">${safe(format)}</p>` : '';
       return `<article class="product-card">
         <div class="product-image"><img src="${safe(product.cover || '1.jpg')}" alt="${safe(title)}" loading="lazy">${badge}</div>
         <div class="product-info">
