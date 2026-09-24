@@ -4,7 +4,7 @@
       'Accueil': 'Home', 'Contact': 'Contact', 'Boutique': 'Shop', 'Design graphique': 'Graphic design', 'X-ART Lab': 'X-ART Lab', 'Éditions numériques': 'Digital editions', 'Produits numériques': 'Digital products', 'Peinture': 'Painting', 'Peinture originale': 'Original painting', 'Boucles bleues I': 'Blue Loops I', 'Résonance noire': 'Black Resonance', 'Bientôt disponible': 'Coming soon', 'Aucune œuvre disponible.': 'No works available.', 'Acheter': 'Purchase', 'Épuisé': 'Sold out',
       'Des gestes noirs superposés forment un champ d’anneaux en rotation, explorant la tension entre le corps, le mouvement et l’espace.': 'Overlapping black gestures form a field of rotating rings, exploring the tension between body, movement, and space.',
 
-      'Œuvres': 'Works', 'Projets': 'Projects', 'Biographie / CV': 'Biography / CV',
+      'Œuvres': 'Works', 'Projets': 'Projects', 'Biographie / CV': 'Biography / CV', 'À propos / CV': 'About / CV',
       'Art · Vêtement · Corps · Mémoire': 'Art · Garment · Body · Memory',
       'Une pratique entre le vêtement, l’installation et la peinture.': 'A practice spanning garment, installation and painting.',
       'Formé entre la Chine et la France, Xing Zhou explore l’identité culturelle, la mémoire et les tensions entre tradition et modernité.': 'Educated in China and France, Xing Zhou explores cultural identity, memory, and the tensions between tradition and modernity.',
@@ -33,7 +33,7 @@
       'Accueil': '首页', 'Contact': '联系', 'Boutique': '商店', 'Design graphique': '平面设计', 'X-ART Lab': 'X-ART Lab', 'Éditions numériques': '数字作品', 'Produits numériques': '数字作品', 'Original painting': '原创绘画', 'Peinture': '绘画', 'Peinture originale': '原创绘画', 'Boucles bleues I': '蓝色回旋 I', 'Blue Loops I': '蓝色回旋 I', 'Résonance noire': '黑色回响', 'Black Resonance': '黑色回响', 'Bientôt disponible': '即将上线', 'Aucune œuvre disponible.': '暂无可购买作品。', 'Acheter': '购买', 'Épuisé': '已售罄',
       'Des gestes noirs superposés forment un champ d’anneaux en rotation, explorant la tension entre le corps, le mouvement et l’espace.': '黑色笔触彼此交叠成旋转的环形结构，探索身体、动作与空间之间的张力。',
 
-      'Œuvres': '作品', 'Projets': '项目', 'Biographie / CV': '简介 / 履历', 'Contact': '联系',
+      'Œuvres': '作品', 'Projets': '项目', 'Biographie / CV': '简介 / 履历', 'À propos / CV': '关于 / 简历', 'Contact': '联系',
       'Art · Vêtement · Corps · Mémoire': '艺术 · 服装 · 身体 · 记忆',
       'Une pratique entre le vêtement, l’installation et la peinture.': '游走于服装、装置与绘画之间的艺术实践。',
       'Formé entre la Chine et la France, Xing Zhou explore l’identité culturelle, la mémoire et les tensions entre tradition et modernité.': 'Xing Zhou 在中国与法国接受教育，创作聚焦文化身份、记忆，以及传统与现代之间的张力。',
