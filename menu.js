@@ -22,12 +22,18 @@
   nav.id = 'site-menu';
   nav.setAttribute('aria-label', 'Navigation principale');
 
-  const locale = header.querySelector(':scope > .locale');
-  if (locale) locale.classList.add('header-locale');
+  let locale = header.querySelector(':scope > .locale');
+  if (!locale) {
+    locale = document.createElement('p');
+    locale.className = 'locale header-locale';
+    locale.textContent = 'FR / EN / 中文';
+  } else {
+    locale.classList.add('header-locale');
+  }
 
   const actions = document.createElement('div');
   actions.className = 'header-actions';
-  if (locale) actions.append(locale);
+  actions.append(locale);
   const button = document.createElement('button');
   button.type = 'button';
   button.className = 'menu-toggle';
@@ -41,7 +47,7 @@
   const instagram = '<svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.25"></circle><circle class="instagram-dot" cx="17.5" cy="6.5" r=".85"></circle></svg>';
   const instagramLink = '<a class="footer-instagram" href="https://www.instagram.com/xingzhou.asia/" target="_blank" rel="noreferrer" aria-label="Instagram de Xing Zhou">' + instagram + '</a>';
   const footer = document.querySelector('footer');
-  if (footer) footer.innerHTML = '<span class="footer-version">Xing Zhou · Paris, France · © 2026</span>' + instagramLink;
+  if (footer) footer.innerHTML = '<span class="footer-version">© 2026 · Xing Zhou</span>' + instagramLink;
 
   const menuFooter = document.createElement('div');
   menuFooter.className = 'menu-footer';
