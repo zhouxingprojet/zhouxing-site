@@ -70,7 +70,8 @@
   });
   while (walker.nextNode()) {
     const node = walker.currentNode;
-    node.__source = node.textContent.trim();
+    if (!node.__xingSource) node.__xingSource = node.textContent.trim();
+    node.__source = node.__xingSource;
     textNodes.push(node);
   }
 
