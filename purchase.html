@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Acheter une œuvre de Xing Zhou.">
+  <title>Achat — Xing Zhou</title>
+  <link rel="canonical" href="https://zhou-xing.com/purchase.html">
+  <link rel="stylesheet" href="styles.css?v=20">
+  <style>
+    .purchase-shell{max-width:1180px;margin:0 auto;padding:clamp(34px,7vw,90px) clamp(20px,5vw,72px) 120px}
+    .purchase-back{display:inline-block;margin-bottom:clamp(28px,5vw,58px);color:inherit;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:4px}
+    .purchase-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);gap:clamp(34px,7vw,100px);align-items:start}
+    .purchase-image{background:#f2f0eb;min-height:320px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .purchase-image img{display:block;width:100%;height:auto;max-height:72vh;object-fit:contain}
+    .purchase-info{padding-top:clamp(0px,2vw,24px)}
+    .purchase-info h1{margin:.2em 0 .3em;font-size:clamp(2rem,4vw,4.2rem);font-weight:400;line-height:1.04}
+    .purchase-price{font-size:1.15rem;letter-spacing:.05em;margin:0 0 1.6rem}
+    .purchase-description{max-width:34rem;line-height:1.7;margin:0 0 1.2rem}
+    .purchase-format{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;margin:0 0 2rem;opacity:.75}
+    .purchase-button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px;background:#111;color:#fff;text-decoration:none;letter-spacing:.06em;transition:opacity .2s ease}
+    .purchase-button:hover,.purchase-button:focus-visible{opacity:.78}
+    .purchase-note{font-size:.82rem;line-height:1.55;max-width:30rem;margin-top:1.2rem;opacity:.7}
+    .purchase-error{max-width:32rem;line-height:1.7}
+    @media (max-width:720px){.purchase-shell{padding-top:28px}.purchase-layout{grid-template-columns:1fr;gap:28px}.purchase-info{padding-top:0}.purchase-image{min-height:0}.purchase-image img{max-height:none}.purchase-button{width:100%}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="identity" href="index.html" aria-label="Xing Zhou, accueil"><span class="monogram"><img src="logo.png" alt=""></span><span class="identity-name">Xing Zhou</span></a>
+    <nav aria-label="Navigation principale"></nav>
+    <p class="locale">FR / EN / 中文</p>
+  </header>
+  <main class="purchase-shell">
+    <a class="purchase-back" href="shop.html" data-back-link>← <span data-back-label>Retour à la boutique</span></a>
+    <section class="purchase-layout" id="purchase-content" aria-live="polite">
+      <div class="purchase-image"><img id="product-image" src="1.jpg" alt=""></div>
+      <div class="purchase-info">
+        <p class="eyebrow" id="purchase-eyebrow">Œuvre disponible</p>
+        <h1 id="product-title">Chargement…</h1>
+        <p class="purchase-price" id="product-price"></p>
+        <p class="purchase-format" id="product-format"></p>
+        <p class="purchase-description" id="product-description"></p>
+        <a class="purchase-button" id="checkout-link" href="#" hidden>Passer au paiement</a>
+        <p class="purchase-note" id="purchase-note">Paiement sécurisé via Stripe. La page de paiement s’ouvrira après cette étape.</p>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"><span class="footer-version">© 2026 · XING ZHOU</span><a class="instagram-link" href="https://www.instagram.com/xingzhou.asia/" target="_blank" rel="noopener" aria-label="Instagram de Xing Zhou"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"></rect><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"></circle><circle cx="17.4" cy="6.7" r="1" fill="currentColor"></circle></svg></a></footer>
+
+  <script src="menu.js?v=20260924f" defer></script>
+  <script src="language.js?v=20260924d" defer></script>
+  <script>
+    (() => {
+      const query = new URLSearchParams(window.location.search);
+      const productId = query.get('id');
+      const image = document.querySelector('#product-image');
+      const title = document.querySelector('#product-title');
+      const price = document.querySelector('#product-price');
+      const format = document.querySelector('#product-format');
+      const description = document.querySelector('#product-description');
+      const checkout = document.querySelector('#checkout-link');
+      const note = document.querySelector('#purchase-note');
+      const backLabel = document.querySelector('[data-back-label]');
+      const eyebrow = document.querySelector('#purchase-eyebrow');
+      const escapeHtml = value => String(value ?? '').replace(/[&<>'"]/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' })[character]);
+      const text = {
+        fr: { loading: 'Chargement…', back: 'Retour à la boutique', eyebrow: 'Œuvre disponible', pay: 'Passer au paiement', note: 'Paiement sécurisé via Stripe. La page de paiement s’ouvrira après cette étape.', missing: 'Cette œuvre est introuvable ou n’est plus disponible.' },
+        en: { loading: 'Loading…', back: 'Back to shop', eyebrow: 'Available work', pay: 'Continue to payment', note: 'Secure payment via Stripe. The payment page will open after this step.', missing: 'This work could not be found or is no longer available.' },
+        zh: { loading: '加载中…', back: '返回商店', eyebrow: '可购买作品', pay: '前往付款', note: '通过 Stripe 安全付款。点击后将进入付款页面。', missing: '未找到该作品，或作品目前不可购买。' }
+      };
+      let products = [];
+      let language = localStorage.getItem('xing-language') || 'fr';
+      const localized = (product, field, lang) => product[field + '_' + lang] || product[field + '_fr'] || '';
+
+      function render() {
+        const labels = text[language] || text.fr;
+        const product = products.find(item => item.id === productId && item.published !== false);
+        backLabel.textContent = labels.back;
+        eyebrow.textContent = labels.eyebrow;
+        note.textContent = labels.note;
+        if (!product) {
+          title.textContent = labels.missing;
+          image.hidden = true;
+          price.textContent = '';
+          format.textContent = '';
+          description.textContent = '';
+          checkout.hidden = true;
+          return;
+        }
+        const productTitle = localized(product, 'title', language);
+        document.title = productTitle + ' — Xing Zhou';
+        title.textContent = productTitle;
+        price.textContent = product.price || '';
+        format.textContent = product['format_' + language] || product.format || '';
+        description.textContent = localized(product, 'description', language);
+        image.src = product.cover || '1.jpg';
+        image.alt = productTitle;
+        checkout.href = product.checkout_url || '#';
+        checkout.hidden = !product.checkout_url || product.status === 'sold-out';
+        checkout.textContent = labels.pay;
+      }
+
+      fetch('data/products.json', { cache: 'no-store' })
+        .then(response => { if (!response.ok) throw new Error('Products could not be loaded'); return response.json(); })
+        .then(data => { products = Array.isArray(data) ? data : []; render(); })
+        .catch(() => { products = []; render(); });
+      window.addEventListener('xing-language-change', event => { language = event.detail?.language || language; render(); });
+      title.textContent = (text[language] || text.fr).loading;
+    })();
+  </script>
+</body>
+</html>
