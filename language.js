@@ -239,6 +239,17 @@
       const trailing = node.textContent.match(/\s*$/)[0];
       node.textContent = leading + (dictionary[node.__source] || node.__source) + trailing;
     });
+    const homeTitle = document.querySelector('#home-title');
+    const homeTitleParts = {
+      fr: ['Art · Vêtement ·', 'Corps · Mémoire'],
+      en: ['Art · Garment ·', 'Body · Memory'],
+      zh: ['艺术 · 服装 ·', '身体 · 记忆']
+    }[language];
+    if (homeTitle && homeTitleParts) {
+      homeTitle.querySelectorAll('span').forEach((part, index) => {
+        if (homeTitleParts[index]) part.textContent = homeTitleParts[index];
+      });
+    }
     document.documentElement.lang = language === 'zh' ? 'zh-CN' : language;
     document.querySelectorAll('.lang-button').forEach(button => {
       button.setAttribute('aria-pressed', String(button.dataset.lang === language));
