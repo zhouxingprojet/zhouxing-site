@@ -35,10 +35,10 @@ footer .footer-instagram .instagram-dot{fill:currentColor;stroke:none}
   header.querySelectorAll('.menu-toggle, .menu-footer').forEach(el => el.remove());
 
   const links = [
+    ['x-art-lab.html', 'X-ART Lab'],
     ['index.html', 'Accueil'],
     ['portfolio.html', 'Œuvres'],
     ['graphic-design.html', 'Design graphique'],
-    ['x-art-lab.html', 'X-ART Lab'],
     ['Cv.html', 'À propos / CV'],
     ['Contact.html', 'Contact'],
     ['shop.html', 'Boutique']

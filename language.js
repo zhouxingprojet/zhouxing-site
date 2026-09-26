@@ -55,7 +55,7 @@
 
     },
     zh: {
-      'Accueil': '首页', 'Contact': '联系', 'Boutique': '商店', 'Design graphique': '平面设计', 'X-ART Lab': 'X-ART Lab', 'Éditions numériques': '数字作品', 'Produits numériques': '数字作品', 'Original painting': '原创绘画', 'Peinture': '绘画', 'Peinture originale': '原创绘画', 'Boucles bleues I': '蓝色回旋 I', 'Blue Loops I': '蓝色回旋 I', 'Résonance noire': '黑色回响', 'Black Resonance': '黑色回响', 'Bientôt disponible': '即将上线', 'Aucune œuvre disponible.': '暂无可购买作品。', 'Acheter': '购买', 'Épuisé': '已售罄',
+      'Accueil': '首页', 'Contact': '联系', 'Boutique': '商店', 'Design graphique': '平面设计', 'X-ART Lab': '当代艺术文库', 'Éditions numériques': '数字作品', 'Produits numériques': '数字作品', 'Original painting': '原创绘画', 'Peinture': '绘画', 'Peinture originale': '原创绘画', 'Boucles bleues I': '蓝色回旋 I', 'Blue Loops I': '蓝色回旋 I', 'Résonance noire': '黑色回响', 'Black Resonance': '黑色回响', 'Bientôt disponible': '即将上线', 'Aucune œuvre disponible.': '暂无可购买作品。', 'Acheter': '购买', 'Épuisé': '已售罄',
       'Des gestes noirs superposés forment un champ d’anneaux en rotation, explorant la tension entre le corps, le mouvement et l’espace.': '黑色笔触彼此交叠成旋转的环形结构，探索身体、动作与空间之间的张力。',
 
 
