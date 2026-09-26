@@ -17,6 +17,17 @@ footer .footer-instagram .instagram-icon{display:block;width:17px;height:17px;fi
 footer .footer-instagram .instagram-dot{fill:currentColor;stroke:none}
 .site-header.menu-open .menu-footer .menu-instagram{justify-content:flex-end}
 .site-header.menu-open .menu-footer .instagram-icon{width:17px;height:17px}
+.site-header.menu-open nav .menu-list{display:flex;flex-direction:column;align-items:center;gap:clamp(14px,2.2vh,28px);width:min(920px,100%);margin:0;padding:0;list-style:none}
+.site-header.menu-open nav .menu-item,.site-header.menu-open nav .menu-group{display:flex;flex-direction:column;align-items:center;width:100%;margin:0;padding:0}
+.site-header.menu-open nav .menu-parent-row{display:flex;align-items:center;justify-content:center;width:100%}
+.site-header.menu-open nav .menu-parent-row>a{margin:0}
+.site-header.menu-open nav .menu-submenu{display:flex;flex-wrap:wrap;justify-content:center;gap:5px 22px;width:100%;max-width:760px;margin:4px 0 0;padding:11px 0 0;border-top:1px solid var(--line);list-style:none}
+.site-header.menu-open nav .menu-submenu a{padding:3px 6px;color:var(--muted);font-size:clamp(12px,1.45vw,20px);font-weight:400;line-height:1.15;letter-spacing:-.01em;white-space:nowrap}
+.site-header.menu-open nav .menu-submenu .menu-submenu{width:auto;max-width:none;margin:3px 0 0;padding:3px 0 0;border-top:0;gap:4px 16px}
+.site-header.menu-open nav .menu-submenu .menu-group{width:auto;align-items:center}
+.site-header.menu-open nav .menu-submenu .menu-group>.menu-parent-row>a{font-size:clamp(15px,1.8vw,25px);color:var(--ink)}
+.site-header.menu-open nav .menu-submenu .menu-group>.menu-submenu{flex-direction:column;align-items:center;gap:2px}
+.site-header.menu-open nav .menu-submenu .menu-group>.menu-submenu a{font-size:clamp(11px,1.2vw,16px)}
 @media(max-width:850px){
   .site-header{display:grid;grid-template-columns:1fr auto;align-items:center}
   .site-header .identity{grid-column:1;grid-row:1}
@@ -26,6 +37,11 @@ footer .footer-instagram .instagram-dot{fill:currentColor;stroke:none}
   .site-header.menu-open .header-actions{top:16px;right:16px}
   footer{flex-wrap:nowrap;gap:12px}
   footer .footer-instagram{width:24px}
+  .site-header.menu-open nav .menu-list{gap:13px}
+  .site-header.menu-open nav .menu-submenu{gap:4px 13px;padding-top:8px}
+  .site-header.menu-open nav .menu-submenu a{font-size:clamp(11px,3.4vw,16px)}
+  .site-header.menu-open nav .menu-submenu .menu-group>.menu-parent-row>a{font-size:clamp(14px,4.5vw,21px)}
+  .site-header.menu-open nav .menu-submenu .menu-group>.menu-submenu a{font-size:clamp(10px,3vw,14px)}
 }
 `;
   document.head.append(style);
@@ -35,16 +51,53 @@ footer .footer-instagram .instagram-dot{fill:currentColor;stroke:none}
   header.querySelectorAll('.menu-toggle, .menu-footer').forEach(el => el.remove());
 
   const links = [
-    ['x-art-lab.html', 'X-ART Lab'],
+    {
+      href: 'portfolio.html',
+      label: 'Œuvres',
+      children: [
+        ['portfolio.html', 'Tous les projets'],
+        ['portfolio.html#interactive-works', 'Œuvres interactives'],
+        ['portfolio.html#visual-art', 'Arts visuels'],
+        ['portfolio.html#graphic-design', 'Design graphique']
+      ]
+    },
+    {
+      href: 'x-art-lab.html',
+      label: 'X-ART Lab',
+      children: [
+        ['x-art-lab.html#presentation', 'Présentation de la plateforme'],
+        ['x-art-lab.html#research', 'Recherche'],
+        ['x-art-lab.html#artist-archives', 'Archives d’artistes'],
+        ['https://x-art-lab.pages.dev/', 'Accéder à la plateforme', true]
+      ]
+    },
+    {
+      href: 'Cv.html#bio',
+      label: 'À propos',
+      children: [
+        ['Cv.html#bio', 'Biographie'],
+        ['Cv.html#cv', 'CV'],
+        ['Cv.html#statement', 'Déclaration de l’artiste']
+      ]
+    },
     ['index.html', 'Accueil'],
-    ['portfolio.html', 'Œuvres'],
-    ['graphic-design.html', 'Design graphique'],
-    ['Cv.html', 'À propos / CV'],
     ['Contact.html', 'Contact'],
     ['shop.html', 'Boutique']
   ];
   const current = location.pathname.split('/').pop() || 'index.html';
-  nav.innerHTML = links.map(([href, label]) => '<a href="' + href + '"' + (current === href ? ' aria-current="page"' : '') + '>' + label + '</a>').join('');
+  const isCurrent = href => {
+    const target = href.split('#')[0];
+    return target.startsWith('http') ? false : current === (target || 'index.html');
+  };
+  const renderItem = item => {
+    if (Array.isArray(item)) {
+      const [href, label, external] = item;
+      return '<li class="menu-item"><a href="' + href + '"' + (external ? ' target="_blank" rel="noopener"' : '') + (isCurrent(href) ? ' aria-current="page"' : '') + '>' + label + '</a></li>';
+    }
+    const currentGroup = isCurrent(item.href) || item.children.some(child => isCurrent(Array.isArray(child) ? child[0] : child.href));
+    return '<li class="menu-group' + (currentGroup ? ' is-current' : '') + '"><div class="menu-parent-row"><a class="menu-parent" href="' + item.href + '"' + (isCurrent(item.href) ? ' aria-current="page"' : '') + '>' + item.label + '</a></div><ul class="menu-submenu">' + item.children.map(renderItem).join('') + '</ul></li>';
+  };
+  nav.innerHTML = '<ul class="menu-list">' + links.map(renderItem).join('') + '</ul>';
   nav.id = 'site-menu';
   nav.setAttribute('aria-label', 'Navigation principale');
 

@@ -59,13 +59,13 @@
       'Des gestes noirs superposés forment un champ d’anneaux en rotation, explorant la tension entre le corps, le mouvement et l’espace.': '黑色笔触彼此交叠成旋转的环形结构，探索身体、动作与空间之间的张力。',
 
 
-      'Œuvres': '作品', 'Projets': '项目', 'Biographie / CV': '简介 / 履历', 'À propos / CV': '关于 / 简历', 'Contact': '联系',
+      'Œuvres': '作品集', 'Projets': '项目', 'Biographie / CV': '简介 / 履历', 'À propos / CV': '关于 / 简历', 'Contact': '联系',
       'Art · Vêtement · Corps · Mémoire': '艺术 · 服装 · 身体 · 记忆',
       'Une pratique entre le vêtement, l’installation et la peinture.': '游走于服装、装置与绘画之间的艺术实践。',
       'Formé entre la Chine et la France, Xing Zhou explore l’identité culturelle, la mémoire et les tensions entre tradition et modernité.': 'Xing Zhou 在中国与法国接受教育，创作聚焦文化身份、记忆，以及传统与现代之间的张力。',
       'La mode et la mort': '时尚与死亡', 'Corps / Vêtement': '身体 / 服装',
       'Performance · Photographie': '行为 · 摄影', 'Acrylique sur papier': '纸本丙烯',
-      'Projets sélectionnés · 2023—2026': '精选项目 · 2023—2026', 'Œuvres': '作品',
+      'Projets sélectionnés · 2023—2026': '精选项目 · 2023—2026', 'Œuvres': '作品集',
       '2023 · Installation · Vue d’exposition': '2023 · 装置 · 展览现场',
       'Inspiré du Dialogue de la Mode et de la Mort de Giacomo Leopardi, le projet observe le vêtement comme forme passagère, image sociale et enveloppe du corps. L’installation met en tension l’apparence, la mélancolie et la mortalité.': '项目灵感来自贾科莫·莱奥帕尔迪的《时尚与死亡的对话》，将服装视为短暂的形式、社会形象与身体的外壳。装置把外表、忧郁与死亡置于彼此拉扯的关系中。',
       'Performance · Textile · Photographie': '行为 · 纺织 · 摄影',
@@ -110,9 +110,29 @@
     'Installer sur iPhone': 'Install on iPhone',
     'Nom': 'Name',
     'Votre e-mail': 'Your email',
+    'À propos': 'About',
+    'Biographie': 'Biography',
+    'CV': 'CV',
+    'Déclaration de l’artiste': 'Artist statement',
+    'Ma pratique se situe à la croisée du vêtement, de l’installation, de la performance et de la peinture. Je travaille avec le corps comme un espace de mémoire, de transformation et de tension.': 'My practice sits at the intersection of garment, installation, performance, and painting. I work with the body as a space of memory, transformation, and tension.',
+    'À travers les matières, les gestes et les images, j’explore les déplacements de l’identité culturelle entre la Chine et la France. Mes projets cherchent des formes ouvertes, où le vêtement devient architecture, protection, contrainte ou récit.': 'Through materials, gestures, and images, I explore the shifting forms of cultural identity between China and France. My projects seek open forms in which clothing becomes architecture, protection, constraint, or narrative.',
     'Sujet': 'Subject',
     'Message': 'Message',
-    'Envoyer le message': 'Send message'
+    'Envoyer le message': 'Send message',
+    'Tous les projets': 'All works',
+    'Œuvres interactives': 'Interactive works',
+    'Arts visuels': 'Visual art',
+    'Présentation de la plateforme': 'Platform overview',
+    'Recherche': 'Research',
+    'Archives d’artistes': 'Artist archives',
+    'Accéder à la plateforme': 'Open the platform',
+    'Architecture de la plateforme': 'Platform architecture',
+    'Une bibliothèque en mouvement': 'A living library',
+    'Articles de recherche': 'Research articles',
+    'Des textes pour comprendre les œuvres, les pratiques et les questions qui traversent l’art contemporain.': 'Texts for understanding the works, practices, and questions that shape contemporary art.',
+    'Des dossiers pour relier les œuvres, les parcours, les références et les gestes de création.': 'Files connecting works, practices, references, and gestures of making.',
+    'Lectures thématiques': 'Thematic readings',
+    'Des parcours éditoriaux pour lire autrement les images, les matières, les corps et les espaces.': 'Editorial paths for reading images, materials, bodies, and spaces differently.'
   });
 
   Object.assign(dictionaries.zh, {
@@ -128,9 +148,29 @@
     'Installer sur iPhone': '在 iPhone 上安装',
     'Nom': '姓名',
     'Votre e-mail': '你的邮箱',
+    'À propos': '关于',
+    'Biographie': '简介',
+    'CV': '简历',
+    'Déclaration de l’artiste': '艺术家陈述',
+    'Ma pratique se situe à la croisée du vêtement, de l’installation, de la performance et de la peinture. Je travaille avec le corps comme un espace de mémoire, de transformation et de tension.': '我的创作位于服装、装置、行为与绘画的交汇处。我把身体视为记忆、转化与张力发生的空间。',
+    'À travers les matières, les gestes et les images, j’explore les déplacements de l’identité culturelle entre la Chine et la France. Mes projets cherchent des formes ouvertes, où le vêtement devient architecture, protection, contrainte ou récit.': '我通过材料、动作与图像，探索中国与法国之间不断变化的文化身份。我的项目寻找开放的形式，让服装成为建筑、保护、束缚或叙事。',
     'Sujet': '主题',
     'Message': '留言',
-    'Envoyer le message': '发送留言'
+    'Envoyer le message': '发送留言',
+    'Tous les projets': '全部作品',
+    'Œuvres interactives': '互动作品',
+    'Arts visuels': '视觉艺术',
+    'Présentation de la plateforme': '平台介绍',
+    'Recherche': '研究文章',
+    'Archives d’artistes': '艺术家档案',
+    'Accéder à la plateforme': '进入平台',
+    'Architecture de la plateforme': '平台架构',
+    'Une bibliothèque en mouvement': '一座持续生长的文库',
+    'Articles de recherche': '研究文章',
+    'Des textes pour comprendre les œuvres, les pratiques et les questions qui traversent l’art contemporain.': '帮助理解当代艺术作品、实践与问题的研究文章。',
+    'Des dossiers pour relier les œuvres, les parcours, les références et les gestes de création.': '连接作品、艺术家经历、参考资料与创作行动的档案。',
+    'Lectures thématiques': '主题阅读',
+    'Des parcours éditoriaux pour lire autrement les images, les matières, les corps et les espaces.': '通过编辑策划的阅读路径，重新理解图像、材料、身体与空间。'
   });
 
 

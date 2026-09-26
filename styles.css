@@ -222,3 +222,20 @@ body.menu-is-open{overflow:hidden}
   .home-page .home-footer .footer-instagram{width:34px}
   .home-page .home-footer .footer-instagram .instagram-icon{width:22px;height:22px}
 }
+
+/* X-ART Lab platform architecture */
+.app-architecture{display:grid;grid-template-columns:1fr 2fr;gap:8vw;padding:92px 0 28px;border-bottom:1px solid var(--line)}
+.app-architecture h2{font-size:clamp(32px,4.3vw,60px);font-weight:400;line-height:1;letter-spacing:-.04em;margin:0;max-width:7em}
+.app-architecture-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
+.app-architecture-grid article{padding:24px 20px 28px 0}
+.app-architecture-grid article+article{border-left:1px solid var(--line);padding-left:20px}
+.app-architecture-grid span{font-size:9px;color:var(--muted);letter-spacing:.12em}
+.app-architecture-grid h3{font-size:16px;font-weight:500;line-height:1.2;margin:34px 0 12px}
+.app-architecture-grid p{color:var(--muted);font-size:12px;line-height:1.65;margin:0}
+.artist-statement-copy p{font-size:clamp(17px,2vw,24px);line-height:1.5;margin:0;max-width:34em}
+.artist-statement-copy p+p{margin-top:24px}
+@media(max-width:850px){
+  .app-architecture{grid-template-columns:1fr;gap:38px;padding-top:66px}
+  .app-architecture-grid{grid-template-columns:1fr}
+  .app-architecture-grid article,.app-architecture-grid article+article{padding:25px 0 30px;border-left:0;border-bottom:1px solid var(--line)}
+}
