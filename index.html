@@ -120,13 +120,53 @@
       .home-statement p{margin-top:26px;font-size:34px}
       .home-page .home-footer{padding:18px 16px}
     }
+  
+    .home-page{overflow-x:hidden}
+    .home-page .site-header:not(.menu-open) .locale{display:flex;align-items:center;gap:7px;margin:0;color:#777;font-size:11px;letter-spacing:.08em}
+    .home-page .site-header:not(.menu-open) .locale .lang-button{appearance:none;border:0;background:none;padding:0;color:#777;font:inherit;letter-spacing:inherit;cursor:pointer}
+    .home-page .site-header:not(.menu-open) .locale .lang-button.is-active{color:#171717}
+    .home-page .site-header:not(.menu-open) .locale .lang-button:hover,.home-page .site-header:not(.menu-open) .locale .lang-button:focus-visible{color:#171717;text-decoration:underline;text-underline-offset:3px}
+    .home-hero-index{color:#171717}
+    .home-hero-index::before,.home-hero-visual::after{display:none}
+    .home-hero-visual::before{color:#777}
+    .home-path-number{color:#777}
+    .home-gallery-item:nth-child(2) img{filter:none}
+    @media(max-width:850px){
+      .home-page .site-header:not(.menu-open){margin:12px 16px 32px;padding:5px 0}
+      .home-editorial{padding:0 16px 48px}
+      .home-intro{padding:18px 0 38px}
+      .home-intro h1{font-size:clamp(44px,13vw,72px);margin-top:18px;line-height:.95}
+      .home-intro-copy{margin-top:26px}
+      .home-hero{gap:22px}
+      .home-hero-copy{padding:0 0 6px}
+      .home-hero-copy h2{font-size:clamp(38px,11vw,58px);line-height:.98}
+      .home-hero-copy p{font-size:14px;line-height:1.65}
+      .home-hero-link{margin-top:24px}
+      .home-gallery{margin-top:72px}
+      .home-gallery-heading{display:grid;grid-template-columns:1fr auto;gap:10px 16px;align-items:end;margin-bottom:22px}
+      .home-gallery-heading .home-kicker{grid-column:1/-1}
+      .home-gallery-heading h2{margin:0;line-height:.98}
+      .home-gallery-heading .home-meta{margin:0;max-width:120px;text-align:right}
+      .home-gallery-item:nth-child(1) img{aspect-ratio:1.2}
+      .home-gallery-item:nth-child(2) img,.home-gallery-item:nth-child(3) img{aspect-ratio:.82}
+      .home-gallery-caption strong{font-size:12px}
+      .home-gallery-caption small{font-size:10px;line-height:1.25}
+      .home-hero-link span,.home-hero-caption a,.home-path .path-arrow{font-size:18px;width:auto;height:auto;border:0;border-radius:0;display:inline;color:inherit;background:none;line-height:1}
+      .home-hero-link span::before,.home-hero-caption a::before,.home-path .path-arrow::before{display:none;content:none}
+      .home-paths{margin-top:74px}
+      .home-path{min-height:156px;padding:18px 0}
+      .home-path h3{margin:16px 0 6px;font-size:clamp(30px,8vw,42px)}
+      .home-path p{font-size:13px}
+      .home-statement{margin-top:72px}
+      .home-statement p{margin-top:22px;font-size:32px;line-height:1.08}
+    }
   </style>
 </head>
 <body class="home-page">
   <header class="site-header">
     <a class="identity" href="index.html" aria-label="Xing Zhou, accueil"><span class="monogram"><img src="logo.png" alt=""></span><span>Xing Zhou</span></a>
     <nav aria-label="Navigation principale"></nav>
-    <p class="locale">FR</p>
+    <p class="locale">FR / EN / 中文</p>
   </header>
   <main class="home-editorial" aria-label="Œuvre mise en avant">
     <section class="home-intro" aria-labelledby="home-title">
@@ -187,6 +227,6 @@
     <a class="footer-instagram" href="https://www.instagram.com/xingzhou.asia/" target="_blank" rel="noreferrer" aria-label="Instagram de Xing Zhou"><svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.25"></circle><circle class="instagram-dot" cx="17.5" cy="6.5" r=".85"></circle></svg></a>
   </footer>
   <script src="menu.js?v=20260926b" defer></script>
-  <script src="language.js?v=20260926d" defer></script>
+  <script src="language.js?v=20260926e" defer></script>
 </body>
 </html>
