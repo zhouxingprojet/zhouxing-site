@@ -18,9 +18,8 @@
     '.site-header.menu-open nav .menu-list{display:flex;flex-direction:column;align-items:center;gap:clamp(14px,2.2vh,28px);width:min(920px,100%);margin:0;padding:0;list-style:none}',
     '.site-header.menu-open nav .menu-item,.site-header.menu-open nav .menu-group{display:flex;flex-direction:column;align-items:center;width:100%;margin:0;padding:0}',
     '.site-header.menu-open nav .menu-parent-row{display:flex;align-items:center;justify-content:center;width:100%}',
+    '.site-header.menu-open nav .menu-list > .menu-item > a,.site-header.menu-open nav .menu-list > .menu-group > .menu-parent-row .menu-parent{font-size:clamp(17px,2.2vw,26px);line-height:1.2;letter-spacing:.01em;font-weight:400}',
     '.site-header.menu-open nav .menu-parent{appearance:none;border:0;background:transparent;color:var(--ink);font:inherit;cursor:pointer;margin:0;padding:0;text-align:center}',
-    '.site-header.menu-open nav .menu-parent::after{content:"+";display:inline-block;margin-left:10px;color:var(--muted);font-size:.75em;font-weight:400}',
-    '.site-header.menu-open nav .menu-group.is-expanded>.menu-parent-row .menu-parent::after{content:"−"}',
     '.site-header.menu-open nav .menu-submenu{display:none;flex-wrap:wrap;justify-content:center;gap:5px 22px;width:100%;max-width:760px;margin:4px 0 0;padding:11px 0 0;border-top:1px solid var(--line);list-style:none}',
     '.site-header.menu-open nav .menu-group.is-expanded>.menu-submenu{display:flex}',
     '.site-header.menu-open nav .menu-submenu a{padding:3px 6px;color:var(--muted);font-size:clamp(12px,1.45vw,20px);font-weight:400;line-height:1.15;letter-spacing:-.01em;white-space:nowrap}',
@@ -29,7 +28,7 @@
     '.site-header.menu-open nav .menu-submenu .menu-group>.menu-parent-row .menu-parent{font-size:clamp(15px,1.8vw,25px);color:var(--ink)}',
     '.site-header.menu-open nav .menu-submenu .menu-group>.menu-submenu{flex-direction:column;align-items:center;gap:2px}',
     '.site-header.menu-open nav .menu-submenu .menu-group>.menu-submenu a{font-size:clamp(11px,1.2vw,16px)}',
-    '@media(max-width:850px){.site-header{display:grid;grid-template-columns:1fr auto;align-items:center}.site-header .identity{grid-column:1;grid-row:1}.site-header .header-actions{grid-column:2;grid-row:1;gap:8px}.site-header .header-locale{gap:2px}.site-header .header-locale .lang-button{font-size:8px;padding:5px 2px}.site-header.menu-open .header-actions{top:16px;right:16px}footer{flex-wrap:nowrap;gap:12px}footer .footer-instagram{width:24px}.site-header.menu-open nav .menu-list{gap:13px}.site-header.menu-open nav .menu-submenu{gap:4px 13px;padding-top:8px}.site-header.menu-open nav .menu-submenu a{font-size:clamp(11px,3.4vw,16px)}.site-header.menu-open nav .menu-submenu .menu-group>.menu-parent-row .menu-parent{font-size:clamp(14px,4.5vw,21px)}.site-header.menu-open nav .menu-submenu .menu-group>.menu-submenu a{font-size:clamp(10px,3vw,14px)}}'
+    '@media(max-width:850px){.site-header{display:grid;grid-template-columns:1fr auto;align-items:center}.site-header .identity{grid-column:1;grid-row:1}.site-header .header-actions{grid-column:2;grid-row:1;gap:8px}.site-header .header-locale{gap:2px}.site-header .header-locale .lang-button{font-size:8px;padding:5px 2px}.site-header.menu-open .header-actions{top:16px;right:16px}footer{flex-wrap:nowrap;gap:12px}footer .footer-instagram{width:24px}.site-header.menu-open nav .menu-list{gap:13px}.site-header.menu-open nav .menu-submenu{gap:4px 13px;padding-top:8px}.site-header.menu-open nav .menu-submenu a{font-size:clamp(13px,3.8vw,18px)}.site-header.menu-open nav .menu-submenu .menu-group>.menu-parent-row .menu-parent{font-size:clamp(14px,4.5vw,21px)}.site-header.menu-open nav .menu-submenu .menu-group>.menu-submenu a{font-size:clamp(10px,3vw,14px)}}'
   ].join('');
   document.head.append(style);
   const header = document.querySelector('.site-header');
@@ -38,6 +37,7 @@
   header.querySelectorAll('.menu-toggle, .menu-footer').forEach(el => el.remove());
 
   const links = [
+    ['index.html', 'Accueil'],
     {
       href: 'portfolio.html',
       label: 'Œuvres',
@@ -67,7 +67,6 @@
         ['Cv.html#statement', 'Déclaration de l’artiste']
       ]
     },
-    ['index.html', 'Accueil'],
     ['Contact.html', 'Contact'],
     ['shop.html', 'Boutique']
   ];
