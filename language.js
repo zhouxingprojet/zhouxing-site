@@ -98,6 +98,12 @@
   };
 
   Object.assign(dictionaries.en, {
+    'Œuvre sélectionnée · 01': 'Selected work · 01',
+    'Explorer': 'Explore',
+    'Trois entrées dans le travail': 'Three ways into the work',
+    'Le vêtement devient abri, contrainte et seconde architecture. Le corps disparaît partiellement sous la matière et laisse émerger une forme ambiguë.': 'Clothing becomes shelter, constraint, and a second architecture. The body partly disappears beneath the material, allowing an ambiguous form to emerge.',
+    'Une pratique en mouvement': 'A practice in motion',
+    'À travers les matières, les gestes et les images, j’explore les déplacements de l’identité culturelle entre la Chine et la France.': 'Through materials, gestures, and images, I explore the shifting forms of cultural identity between China and France.',
     '2026 · Acrylique sur papier · 1148 × 1536 px': '2026 · Acrylic on paper · 1148 × 1536 px',
     'Plateforme de recherche artistique': 'Art research platform',
     'Ouvrir l’application': 'Open the app',
@@ -136,6 +142,12 @@
   });
 
   Object.assign(dictionaries.zh, {
+    'Œuvre sélectionnée · 01': '精选作品 · 01',
+    'Explorer': '探索',
+    'Trois entrées dans le travail': '进入创作的三个入口',
+    'Le vêtement devient abri, contrainte et seconde architecture. Le corps disparaît partiellement sous la matière et laisse émerger une forme ambiguë.': '服装成为庇护、束缚与第二层建筑。身体部分隐没于材料之下，一种暧昧的形态由此浮现。',
+    'Une pratique en mouvement': '持续运动的创作实践',
+    'À travers les matières, les gestes et les images, j’explore les déplacements de l’identité culturelle entre la Chine et la France.': '我通过材料、动作与图像，探索中国与法国之间不断变化的文化身份。',
     '2026 · Acrylique sur papier · 1148 × 1536 px': '2026 · 纸本丙烯 · 1148 × 1536 像素',
     'Plateforme de recherche artistique': '艺术研究平台',
     'Ouvrir l’application': '打开应用',
