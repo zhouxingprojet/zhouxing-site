@@ -1,8 +1,19 @@
 (() => {
   const dictionaries = {
+    fr: {
+      'BODY / GARMENT': 'CORPS / VÊTEMENT', 'PERFORMANCE · TEXTILE · PHOTOGRAPHY': 'Performance · Textile · Photographie', 'VOIR LE PROJET →': 'VOIR LE PROJET →', 'FAIRE DÉFILER': 'FAIRE DÉFILER', 'FAIRE DÉFILER ↓': 'FAIRE DÉFILER ↓',
+      'SELECTED PROJECTS · 2023—2026': 'PROJETS SÉLECTIONNÉS · 2023—2026', 'Works': 'Œuvres', 'A SOFT': 'UN DOUX', 'REFUSAL': 'REFUS', 'GENERATIVE IMAGE & SOUND': 'IMAGE GÉNÉRATIVE & SON', 'INTERACTIVE WORK · SOUND ON': 'ŒUVRE INTERACTIVE · SON ACTIVÉ', '01 / GENERATIVE IMAGE & SOUND': '01 / IMAGE GÉNÉRATIVE & SON', 'A Soft Refusal': 'Un doux refus', '2026 · P5.JS · WEB AUDIO · 82 SECONDS': '2026 · P5.JS · WEB AUDIO · 82 SECONDES', 'Discover the work': 'Découvrir l’œuvre', 'WORKS': 'ŒUVRES', 'Projects': 'Projets',
+      'Fashion and Death': 'La mode et la mort', '2023 · INSTALLATION · EXHIBITION VIEW': '2023 · INSTALLATION · VUE D’EXPOSITION', 'Body / Garment': 'Corps / Vêtement', 'Clothing leaves its everyday function to become shelter, constraint, and a second architecture. The body partly disappears beneath the material, allowing an ambiguous form to emerge.': 'Le vêtement quitte sa fonction quotidienne pour devenir abri, contrainte et seconde architecture. Le corps disparaît partiellement sous la matière et laisse émerger une forme ambiguë.', 'Blue Loops I': 'Boucles bleues I', '2026 · ACRYLIC ON PAPER · 60 × 80 CM': '2026 · Acrylique sur papier · 60 × 80 cm', 'Black Resonance': 'Résonance noire', '2026 · ACRYLIQUE SUR PAPIER · 1148 × 1536 PX': '2026 · Acrylique sur papier · 1148 × 1536 px',
+      'GRAPHIC DESIGN': 'DESIGN GRAPHIQUE', 'Graphic design': 'Design graphique', 'Graphic Design': 'Design graphique', 'SELECTED WORK · 2026': 'ŒUVRE SÉLECTIONNÉE · 2026', '平面设计': 'Design graphique', 'PHYEL Brand Book 2026': 'PHYEL Brand Book 2026', 'Identité de marque · Design éditorial · Publication numérique': 'Identité de marque · Design éditorial · Publication numérique', '品牌识别 · 编辑设计 · 数字出版': 'Identité de marque · Design éditorial · Publication numérique',
+      'PLATEFORME DE RECHERCHE ARTISTIQUE': 'PLATEFORME DE RECHERCHE ARTISTIQUE', 'X-ART Lab.': 'X-ART Lab.', 'Une plateforme trilingue pour lire des recherches sur l’art contemporain, retrouver vos articles et accéder aux contenus réservés aux abonnés.': 'Une plateforme pour lire des recherches sur l’art contemporain, retrouver vos articles et accéder aux contenus réservés aux abonnés.', 'OUVRIR L’APPLICATION': 'OUVRIR L’APPLICATION', 'TÉLÉCHARGER L’APPLICATION': 'TÉLÉCHARGER L’APPLICATION', 'Lire': 'Lire', 'Rechercher': 'Rechercher', 'Conserver': 'Conserver', 'Abonnement': 'Abonnement', 'MENSUEL': 'MENSUEL', 'ANNUEL': 'ANNUEL', 'Télécharger': 'Télécharger', 'TÉLÉCHARGER POUR ANDROID': 'TÉLÉCHARGER POUR ANDROID', 'INSTALLER SUR IPHONE': 'INSTALLER SUR IPHONE',
+      'EXPERIENCE': 'EXPÉRIENCE', 'EDUCATION': 'FORMATION', 'RESEARCH & EXHIBITIONS': 'RECHERCHE & EXPOSITIONS', 'Fashion designer': 'Styliste', 'Director': 'Directeur', 'Assistant designer': 'Assistant styliste', 'MA Visual Arts': 'Master Arts plastiques', 'BA Visual Arts': 'Licence Arts plastiques', 'BA Information and Communication': 'Licence Information et communication', 'BA Fashion Design': 'Licence Design de vêtement', 'Research project': 'Projet de recherche', 'Garment art and performance': 'L’art vestimentaire et performance', 'Garment and installation': 'Vêtement et installation', 'Pékin': 'Pékin', 'Beijing': 'Pékin', 'Chine': 'Chine',
+      'CONTACT': 'CONTACT', 'Collaborations,\nexhibitions & projects.': 'Collaborations,\nexpositions & projets.', 'EMAIL': 'E-MAIL', 'PHONE': 'TÉLÉPHONE', 'LOCATION': 'LIEU', 'ÉCRIVEZ-MOI': 'ÉCRIVEZ-MOI', 'NOM': 'NOM', 'VOTRE E-MAIL': 'VOTRE E-MAIL', 'SUJET': 'SUJET', 'MESSAGE': 'MESSAGE', 'ENVOYER LE MESSAGE': 'ENVOYER LE MESSAGE',
+      'DIGITAL EDITIONS': 'ÉDITIONS NUMÉRIQUES', 'Shop': 'Boutique', '2 WORKS': '2 ŒUVRES', 'BLUE LOOPS I': 'BOUCLES BLEUES I', 'ORIGINAL PAINTING': 'PEINTURE ORIGINALE', 'PURCHASE': 'ACHETER', '← Back to shop': '← Retour à la boutique', 'AVAILABLE WORK': 'ŒUVRE DISPONIBLE', 'Continue to payment': 'Continuer vers le paiement', 'Secure payment via Stripe. The payment page will open after this step.': 'Paiement sécurisé via Stripe. La page de paiement s’ouvrira après cette étape.'
+    },
     en: {
       'Accueil': 'Home', 'Contact': 'Contact', 'Boutique': 'Shop', 'Design graphique': 'Graphic design', 'X-ART Lab': 'X-ART Lab', 'Éditions numériques': 'Digital editions', 'Produits numériques': 'Digital products', 'Peinture': 'Painting', 'Peinture originale': 'Original painting', 'Boucles bleues I': 'Blue Loops I', 'Résonance noire': 'Black Resonance', 'Bientôt disponible': 'Coming soon', 'Aucune œuvre disponible.': 'No works available.', 'Acheter': 'Purchase', 'Épuisé': 'Sold out',
       'Des gestes noirs superposés forment un champ d’anneaux en rotation, explorant la tension entre le corps, le mouvement et l’espace.': 'Overlapping black gestures form a field of rotating rings, exploring the tension between body, movement, and space.',
+
 
       'Œuvres': 'Works', 'Projets': 'Projects', 'Biographie / CV': 'Biography / CV', 'À propos / CV': 'About / CV',
       'Art · Vêtement · Corps · Mémoire': 'Art · Garment · Body · Memory',
@@ -27,11 +38,20 @@
       'Collaborations,': 'Collaborations,', 'expositions & projets.': 'exhibitions & projects.',
       'Collaborations,\nexpositions & projets.': 'Collaborations,\nexhibitions & projects.',
       'Pour toute demande professionnelle, proposition d’exposition ou collaboration, écrivez-moi directement.': 'For professional enquiries, exhibition proposals, or collaborations, please contact me directly.',
+      'BODY / GARMENT': 'BODY / GARMENT', 'PERFORMANCE · TEXTILE · PHOTOGRAPHY': 'Performance · Textile · Photography', 'VOIR LE PROJET →': 'VIEW PROJECT →', 'FAIRE DÉFILER': 'SCROLL', 'FAIRE DÉFILER ↓': 'SCROLL ↓',
+      'SELECTED PROJECTS · 2023—2026': 'SELECTED PROJECTS · 2023—2026', 'Works': 'Works', 'A SOFT': 'A SOFT', 'REFUSAL': 'REFUSAL', 'GENERATIVE IMAGE & SOUND': 'GENERATIVE IMAGE & SOUND', 'INTERACTIVE WORK · SOUND ON': 'INTERACTIVE WORK · SOUND ON', '01 / GENERATIVE IMAGE & SOUND': '01 / GENERATIVE IMAGE & SOUND', 'A Soft Refusal': 'A Soft Refusal', '2026 · P5.JS · WEB AUDIO · 82 SECONDS': '2026 · P5.JS · WEB AUDIO · 82 SECONDS', 'Discover the work': 'Discover the work', 'WORKS': 'WORKS', 'Projects': 'Projects',
+      'Fashion and Death': 'Fashion and Death', '2023 · INSTALLATION · EXHIBITION VIEW': '2023 · INSTALLATION · EXHIBITION VIEW', 'Body / Garment': 'Body / Garment', 'Clothing leaves its everyday function to become shelter, constraint, and a second architecture. The body partly disappears beneath the material, allowing an ambiguous form to emerge.': 'Clothing leaves its everyday function to become shelter, constraint, and a second architecture. The body partly disappears beneath the material, allowing an ambiguous form to emerge.', 'Blue Loops I': 'Blue Loops I', '2026 · ACRYLIC ON PAPER · 60 × 80 CM': '2026 · ACRYLIC ON PAPER · 60 × 80 CM', 'Black Resonance': 'Black Resonance', '2026 · ACRYLIQUE SUR PAPIER · 1148 × 1536 PX': '2026 · ACRYLIC ON PAPER · 1148 × 1536 PX',
+      'GRAPHIC DESIGN': 'GRAPHIC DESIGN', 'Graphic design': 'Graphic design', 'Graphic Design': 'Graphic Design', 'SELECTED WORK · 2026': 'SELECTED WORK · 2026', '平面设计': 'Graphic design', 'Identité de marque · Design éditorial · Publication numérique': 'Brand identity · Editorial design · Digital publication', '品牌识别 · 编辑设计 · 数字出版': 'Brand identity · Editorial design · Digital publication',
+      'PLATEFORME DE RECHERCHE ARTISTIQUE': 'ART RESEARCH PLATFORM', 'X-ART Lab.': 'X-ART Lab.', 'Une plateforme trilingue pour lire des recherches sur l’art contemporain, retrouver vos articles et accéder aux contenus réservés aux abonnés.': 'A trilingual platform for reading contemporary art research, finding your articles, and accessing subscriber-only content.', 'OUVRIR L’APPLICATION': 'OPEN THE APP', 'TÉLÉCHARGER L’APPLICATION': 'DOWNLOAD THE APP', 'Fonctionne sur iPhone, iPad, Android et ordinateur. Les contenus publiés depuis le tableau de bord sont synchronisés automatiquement.': 'Works on iPhone, iPad, Android, and desktop. Content published from the dashboard syncs automatically.', 'Lire': 'Read', 'Consultez des articles de recherche en français, anglais et chinois.': 'Read research articles in French, English, and Chinese.', 'Rechercher': 'Search', 'Trouvez rapidement un article par titre, résumé ou catégorie.': 'Find an article quickly by title, summary, or category.', 'Conserver': 'Save', 'Lisez et téléchargez vos articles depuis votre espace personnel.': 'Read and download your articles from your personal space.', 'Abonnement': 'Subscription', 'MENSUEL': 'MONTHLY', 'ANNUEL': 'ANNUAL', 'Paiement sécurisé par Stripe. L’abonnement se renouvelle automatiquement et peut être annulé à tout moment.': 'Secure payment via Stripe. The subscription renews automatically and can be cancelled at any time.', 'Télécharger': 'Download', 'Choisissez votre téléphone. Sur Android, téléchargez le fichier APK. Sur iPhone, ouvrez l’application dans Safari puis choisissez « Ajouter à l’écran d’accueil ».': 'Choose your phone. On Android, download the APK file. On iPhone, open the app in Safari and choose “Add to Home Screen”.', 'TÉLÉCHARGER POUR ANDROID': 'DOWNLOAD FOR ANDROID', 'INSTALLER SUR IPHONE': 'INSTALL ON IPHONE', 'Android · APK signé · Version 1.0': 'Android · Signed APK · Version 1.0',
+      'EXPERIENCE': 'EXPERIENCE', 'EDUCATION': 'EDUCATION', 'RESEARCH & EXHIBITIONS': 'RESEARCH & EXHIBITIONS', 'Fashion designer': 'Fashion designer', 'Director': 'Director', 'Assistant designer': 'Assistant designer', 'MA Visual Arts': 'MA Visual Arts', 'BA Visual Arts': 'BA Visual Arts', 'BA Information and Communication': 'BA Information and Communication', 'BA Fashion Design': 'BA Fashion Design', 'Research project': 'Research project', 'L’art vestimentaire et performance': 'Garment art and performance', 'Vêtement et installation': 'Garment and installation', 'Pékin': 'Beijing', 'Chine': 'China', 'Comme des Loups, Paris': 'Comme des Loups, Paris', 'Qin Zhen, Pékin': 'Qin Zhen, Beijing', 'SindyFlower, Pékin': 'SindyFlower, Beijing', 'Su Evan Liu, Pékin': 'Su Evan Liu, Beijing',
+      'CONTACT': 'CONTACT', 'Collaborations,\nexpositions & projets.': 'Collaborations,\nexhibitions & projects.', 'Collaborations,\nexhibitions & projects.': 'Collaborations,\nexhibitions & projects.', 'EMAIL': 'EMAIL', 'PHONE': 'PHONE', 'LOCATION': 'LOCATION', 'ÉCRIVEZ-MOI': 'WRITE TO ME', 'NOM': 'NAME', 'VOTRE E-MAIL': 'YOUR EMAIL', 'SUJET': 'SUBJECT', 'MESSAGE': 'MESSAGE', 'ENVOYER LE MESSAGE': 'SEND MESSAGE', 'For professional enquiries, exhibition proposals, or collaborations, please contact me directly.': 'For professional enquiries, exhibition proposals, or collaborations, please contact me directly.',
+      'DIGITAL EDITIONS': 'DIGITAL EDITIONS', 'Shop': 'Shop', '2 WORKS': '2 WORKS', 'BLUE LOOPS I': 'BLUE LOOPS I', 'ORIGINAL PAINTING': 'ORIGINAL PAINTING', 'PURCHASE': 'PURCHASE', '← Back to shop': '← Back to shop', 'AVAILABLE WORK': 'AVAILABLE WORK', 'Continue to payment': 'Continue to payment', 'Secure payment via Stripe. The payment page will open after this step.': 'Secure payment via Stripe. The payment page will open after this step.',
       'Téléphone': 'Phone', 'Lieu': 'Location'
     },
     zh: {
       'Accueil': '首页', 'Contact': '联系', 'Boutique': '商店', 'Design graphique': '平面设计', 'X-ART Lab': 'X-ART Lab', 'Éditions numériques': '数字作品', 'Produits numériques': '数字作品', 'Original painting': '原创绘画', 'Peinture': '绘画', 'Peinture originale': '原创绘画', 'Boucles bleues I': '蓝色回旋 I', 'Blue Loops I': '蓝色回旋 I', 'Résonance noire': '黑色回响', 'Black Resonance': '黑色回响', 'Bientôt disponible': '即将上线', 'Aucune œuvre disponible.': '暂无可购买作品。', 'Acheter': '购买', 'Épuisé': '已售罄',
       'Des gestes noirs superposés forment un champ d’anneaux en rotation, explorant la tension entre le corps, le mouvement et l’espace.': '黑色笔触彼此交叠成旋转的环形结构，探索身体、动作与空间之间的张力。',
+
 
       'Œuvres': '作品', 'Projets': '项目', 'Biographie / CV': '简介 / 履历', 'À propos / CV': '关于 / 简历', 'Contact': '联系',
       'Art · Vêtement · Corps · Mémoire': '艺术 · 服装 · 身体 · 记忆',
@@ -56,9 +76,19 @@
       'Collaborations,': '合作、', 'expositions & projets.': '展览与项目。',
       'Collaborations,\nexpositions & projets.': '合作、展览\n与项目。',
       'Pour toute demande professionnelle, proposition d’exposition ou collaboration, écrivez-moi directement.': '如有专业咨询、展览提案或合作邀请，请直接与我联系。',
+      'BODY / GARMENT': '身体 / 服装', 'PERFORMANCE · TEXTILE · PHOTOGRAPHY': '行为 · 纺织 · 摄影', 'VOIR LE PROJET →': '查看项目 →', 'FAIRE DÉFILER': '向下滚动', 'FAIRE DÉFILER ↓': '向下滚动 ↓',
+      'SELECTED PROJECTS · 2023—2026': '精选项目 · 2023—2026', 'Works': '作品', 'A SOFT': '一种温和的', 'REFUSAL': '拒绝', 'GENERATIVE IMAGE & SOUND': '生成图像与声音', 'INTERACTIVE WORK · SOUND ON': '互动作品 · 请开启声音', '01 / GENERATIVE IMAGE & SOUND': '01 / 生成图像与声音', 'A Soft Refusal': '一种温和的拒绝', '2026 · P5.JS · WEB AUDIO · 82 SECONDS': '2026 · P5.JS · WEB AUDIO · 82 秒', 'Discover the work': '探索作品', 'WORKS': '作品', 'Projects': '项目',
+      'Fashion and Death': '时尚与死亡', '2023 · INSTALLATION · EXHIBITION VIEW': '2023 · 装置 · 展览现场', 'Body / Garment': '身体 / 服装', 'Clothing leaves its everyday function to become shelter, constraint, and a second architecture. The body partly disappears beneath the material, allowing an ambiguous form to emerge.': '服装脱离日常功能，成为庇护、束缚与第二层建筑。身体部分隐没于材料之下，一种暧昧的形态由此浮现。', 'Blue Loops I': '蓝色回旋 I', '2026 · ACRYLIC ON PAPER · 60 × 80 CM': '2026 · 纸本丙烯 · 60 × 80 厘米', 'Black Resonance': '黑色回响', '2026 · ACRYLIQUE SUR PAPIER · 1148 × 1536 PX': '2026 · 纸本丙烯 · 1148 × 1536 像素',
+      'GRAPHIC DESIGN': '平面设计', 'Graphic design': '平面设计', 'Graphic Design': '平面设计', 'SELECTED WORK · 2026': '精选作品 · 2026', '平面设计': '平面设计', 'Identité de marque · Design éditorial · Publication numérique': '品牌识别 · 编辑设计 · 数字出版', '品牌识别 · 编辑设计 · 数字出版': '品牌识别 · 编辑设计 · 数字出版',
+      'PLATEFORME DE RECHERCHE ARTISTIQUE': '艺术研究平台', 'X-ART Lab.': 'X-ART Lab.', 'Une plateforme trilingue pour lire des recherches sur l’art contemporain, retrouver vos articles et accéder aux contenus réservés aux abonnés.': '一个用于阅读当代艺术研究、查找文章并访问订阅内容的三语平台。', 'OUVRIR L’APPLICATION': '打开应用', 'TÉLÉCHARGER L’APPLICATION': '下载应用', 'Fonctionne sur iPhone, iPad, Android et ordinateur. Les contenus publiés depuis le tableau de bord sont synchronisés automatiquement.': '支持 iPhone、iPad、Android 和电脑。通过后台发布的内容会自动同步。', 'Lire': '阅读', 'Consultez des articles de recherche en français, anglais et chinois.': '阅读法语、英语和中文的艺术研究文章。', 'Rechercher': '搜索', 'Trouvez rapidement un article par titre, résumé ou catégorie.': '按标题、摘要或分类快速找到文章。', 'Conserver': '保存', 'Lisez et téléchargez vos articles depuis votre espace personnel.': '在个人空间中阅读并下载文章。', 'Abonnement': '订阅', 'MENSUEL': '按月', 'ANNUEL': '按年', 'Paiement sécurisé par Stripe. L’abonnement se renouvelle automatiquement et peut être annulé à tout moment.': '通过 Stripe 安全支付。订阅会自动续费，也可随时取消。', 'Télécharger': '下载', 'Choisissez votre téléphone. Sur Android, téléchargez le fichier APK. Sur iPhone, ouvrez l’application dans Safari puis choisissez « Ajouter à l’écran d’accueil ».': '选择你的设备。在 Android 上下载 APK 文件；在 iPhone 上用 Safari 打开应用，然后选择“添加到主屏幕”。', 'TÉLÉCHARGER POUR ANDROID': '下载 Android 版', 'INSTALLER SUR IPHONE': '在 iPhone 上安装', 'Android · APK signé · Version 1.0': 'Android · 已签名 APK · 版本 1.0',
+      'EXPERIENCE': '工作经历', 'EDUCATION': '教育经历', 'RESEARCH & EXHIBITIONS': '研究与展览', 'Fashion designer': '服装设计师', 'Director': '负责人', 'Assistant designer': '助理设计师', 'MA Visual Arts': '视觉艺术硕士', 'BA Visual Arts': '视觉艺术学士', 'BA Information and Communication': '信息与传播学学士', 'BA Fashion Design': '服装设计学士', 'Research project': '研究项目', 'L’art vestimentaire et performance': '服装艺术与行为', 'Vêtement et installation': '服装与装置', 'Pékin': '北京', 'Chine': '中国', 'Comme des Loups, Paris': 'Comme des Loups，巴黎', 'Qin Zhen, Pékin': 'Qin Zhen，北京', 'SindyFlower, Pékin': 'SindyFlower，北京', 'Su Evan Liu, Pékin': 'Su Evan Liu，北京',
+      'CONTACT': '联系', 'Collaborations,\nexpositions & projets.': '合作、展览与项目。', 'Collaborations,\nexhibitions & projects.': '合作、展览与项目。', 'EMAIL': '电子邮箱', 'PHONE': '电话', 'LOCATION': '地点', 'ÉCRIVEZ-MOI': '给我留言', 'NOM': '姓名', 'VOTRE E-MAIL': '你的邮箱', 'SUJET': '主题', 'MESSAGE': '留言', 'ENVOYER LE MESSAGE': '发送留言', 'For professional enquiries, exhibition proposals, or collaborations, please contact me directly.': '如有专业咨询、展览提案或合作邀请，请直接与我联系。',
+      'DIGITAL EDITIONS': '数字作品', 'Shop': '商店', '2 WORKS': '2 件作品', 'BLUE LOOPS I': '蓝色回旋 I', 'ORIGINAL PAINTING': '原创绘画', 'PURCHASE': '购买', '← Back to shop': '← 返回商店', 'AVAILABLE WORK': '可购买作品', 'Continue to payment': '继续付款', 'Secure payment via Stripe. The payment page will open after this step.': '通过 Stripe 安全支付。完成这一步后将打开付款页面。',
       'Téléphone': '电话', 'Lieu': '地点'
     }
   };
+
+
 
 
   const textNodes = [];
@@ -74,6 +104,8 @@
     node.__source = node.__xingSource;
     textNodes.push(node);
   }
+
+
 
 
   const locale = document.querySelector('.header-locale, .locale');
@@ -97,6 +129,8 @@
   });
 
 
+
+
   function setLanguage(language) {
     const dictionary = dictionaries[language] || {};
     textNodes.forEach(node => {
@@ -113,6 +147,7 @@
   }
 
 
+
+
   setLanguage(localStorage.getItem('xing-language') || 'fr');
 })();
- 
