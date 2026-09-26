@@ -224,19 +224,27 @@
   function renderLocale(language) {
     locale.textContent = '';
     const languageLabels = { fr: 'FR', en: 'EN', zh: '中文' };
-    const currentButton = document.createElement('button');
-    currentButton.type = 'button';
-    currentButton.className = 'lang-button lang-current';
-    currentButton.dataset.lang = language;
-    currentButton.textContent = languageLabels[language] || language.toUpperCase();
-    const label = language === 'fr' ? 'Changer de langue' : language === 'en' ? 'Change language' : '切换语言';
-    currentButton.setAttribute('aria-label', label);
-    currentButton.setAttribute('title', label);
-    currentButton.addEventListener('click', () => {
-      const nextLanguage = { fr: 'en', en: 'zh', zh: 'fr' }[language] || 'fr';
-      setLanguage(nextLanguage);
+    const languageNames = { fr: 'Français', en: 'English', zh: '中文' };
+    const actionLabels = { fr: 'Passer au français', en: 'Switch to English', zh: '切换至中文' };
+    Object.entries(languageLabels).forEach(([code, label], index) => {
+      if (index > 0) {
+        const divider = document.createElement('span');
+        divider.className = 'lang-divider';
+        divider.setAttribute('aria-hidden', 'true');
+        divider.textContent = '/';
+        locale.append(divider);
+      }
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'lang-button' + (code === language ? ' is-active' : '');
+      button.dataset.lang = code;
+      button.textContent = label;
+      button.setAttribute('aria-label', actionLabels[code]);
+      button.setAttribute('title', languageNames[code]);
+      if (code === language) button.setAttribute('aria-current', 'true');
+      button.addEventListener('click', () => setLanguage(code));
+      locale.append(button);
     });
-    locale.append(currentButton);
   }
 
 
