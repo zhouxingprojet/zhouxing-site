@@ -98,6 +98,11 @@
   };
 
   Object.assign(dictionaries.en, {
+    'Fragments · 02—04': 'Fragments · 02—04',
+    'Matières en mouvement': 'Materials in motion',
+    'Installation · Peinture · Textile': 'Installation · Painting · Textile',
+    'Installation · 2023': 'Installation · 2023',
+    'Acrylique · 2026': 'Acrylic · 2026',
     'Art · Vêtement ·': 'Art · Garment ·',
     'Corps · Mémoire': 'Body · Memory',
     'Œuvre sélectionnée · 01': 'Selected work · 01',
@@ -144,6 +149,11 @@
   });
 
   Object.assign(dictionaries.zh, {
+    'Fragments · 02—04': '片段 · 02—04',
+    'Matières en mouvement': '运动中的材料',
+    'Installation · Peinture · Textile': '装置 · 绘画 · 纺织',
+    'Installation · 2023': '装置 · 2023',
+    'Acrylique · 2026': '纸本丙烯 · 2026',
     'Art · Vêtement ·': '艺术 · 服装 ·',
     'Corps · Mémoire': '身体 · 记忆',
     'Œuvre sélectionnée · 01': '精选作品 · 01',
@@ -211,25 +221,23 @@
 
   const locale = document.querySelector('.header-locale, .locale');
   if (!locale) return;
-  locale.textContent = '';
-  ['fr', 'en', 'zh'].forEach((language, index) => {
-    if (index) {
-      const separator = document.createElement('span');
-      separator.className = 'lang-separator';
-      separator.textContent = '/';
-      locale.append(separator);
-    }
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'lang-button';
-    button.dataset.lang = language;
-    button.textContent = language === 'zh' ? '中文' : language.toUpperCase();
-    button.setAttribute('aria-label', language === 'fr' ? 'Français' : language === 'en' ? 'English' : '中文');
-    button.addEventListener('click', () => setLanguage(language));
-    locale.append(button);
-  });
-
-
+  function renderLocale(language) {
+    locale.textContent = '';
+    const languageLabels = { fr: 'FR', en: 'EN', zh: '中文' };
+    const currentButton = document.createElement('button');
+    currentButton.type = 'button';
+    currentButton.className = 'lang-button lang-current';
+    currentButton.dataset.lang = language;
+    currentButton.textContent = languageLabels[language] || language.toUpperCase();
+    const label = language === 'fr' ? 'Changer de langue' : language === 'en' ? 'Change language' : '切换语言';
+    currentButton.setAttribute('aria-label', label);
+    currentButton.setAttribute('title', label);
+    currentButton.addEventListener('click', () => {
+      const nextLanguage = { fr: 'en', en: 'zh', zh: 'fr' }[language] || 'fr';
+      setLanguage(nextLanguage);
+    });
+    locale.append(currentButton);
+  }
 
 
   function setLanguage(language) {
@@ -251,9 +259,7 @@
       });
     }
     document.documentElement.lang = language === 'zh' ? 'zh-CN' : language;
-    document.querySelectorAll('.lang-button').forEach(button => {
-      button.setAttribute('aria-pressed', String(button.dataset.lang === language));
-    });
+    renderLocale(language);
     localStorage.setItem('xing-language', language);
     window.dispatchEvent(new CustomEvent('xing-language-change', { detail: { language } }));
   }
