@@ -98,6 +98,8 @@
   };
 
   Object.assign(dictionaries.en, {
+    'Art · Vêtement ·': 'Art · Garment ·',
+    'Corps · Mémoire': 'Body · Memory',
     'Œuvre sélectionnée · 01': 'Selected work · 01',
     'Explorer': 'Explore',
     'Trois entrées dans le travail': 'Three ways into the work',
@@ -142,6 +144,8 @@
   });
 
   Object.assign(dictionaries.zh, {
+    'Art · Vêtement ·': '艺术 · 服装 ·',
+    'Corps · Mémoire': '身体 · 记忆',
     'Œuvre sélectionnée · 01': '精选作品 · 01',
     'Explorer': '探索',
     'Trois entrées dans le travail': '进入创作的三个入口',
