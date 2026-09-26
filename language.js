@@ -55,17 +55,17 @@
 
     },
     zh: {
-      'Accueil': '首页', 'Contact': '联系', 'Boutique': '商店', 'Design graphique': '平面设计', 'X-ART Lab': '当代艺术文库', 'Éditions numériques': '数字作品', 'Produits numériques': '数字作品', 'Original painting': '原创绘画', 'Peinture': '绘画', 'Peinture originale': '原创绘画', 'Boucles bleues I': '蓝色回旋 I', 'Blue Loops I': '蓝色回旋 I', 'Résonance noire': '黑色回响', 'Black Resonance': '黑色回响', 'Bientôt disponible': '即将上线', 'Aucune œuvre disponible.': '暂无可购买作品。', 'Acheter': '购买', 'Épuisé': '已售罄',
+      'Accueil': '首页', 'Contact': '联系', 'Boutique': '商店', 'Design graphique': '平面设计', 'X-ART Lab': '文库', 'Éditions numériques': '数字作品', 'Produits numériques': '数字作品', 'Original painting': '原创绘画', 'Peinture': '绘画', 'Peinture originale': '原创绘画', 'Boucles bleues I': '蓝色回旋 I', 'Blue Loops I': '蓝色回旋 I', 'Résonance noire': '黑色回响', 'Black Resonance': '黑色回响', 'Bientôt disponible': '即将上线', 'Aucune œuvre disponible.': '暂无可购买作品。', 'Acheter': '购买', 'Épuisé': '已售罄',
       'Des gestes noirs superposés forment un champ d’anneaux en rotation, explorant la tension entre le corps, le mouvement et l’espace.': '黑色笔触彼此交叠成旋转的环形结构，探索身体、动作与空间之间的张力。',
 
 
-      'Œuvres': '作品集', 'Projets': '项目', 'Biographie / CV': '简介 / 履历', 'À propos / CV': '关于 / 简历', 'Contact': '联系',
+      'Œuvres': '作品', 'Projets': '项目', 'Biographie / CV': '简介 / 履历', 'À propos / CV': '关于 / 简历', 'Contact': '联系',
       'Art · Vêtement · Corps · Mémoire': '艺术 · 服装 · 身体 · 记忆',
       'Une pratique entre le vêtement, l’installation et la peinture.': '游走于服装、装置与绘画之间的艺术实践。',
       'Formé entre la Chine et la France, Xing Zhou explore l’identité culturelle, la mémoire et les tensions entre tradition et modernité.': 'Xing Zhou 在中国与法国接受教育，创作聚焦文化身份、记忆，以及传统与现代之间的张力。',
       'La mode et la mort': '时尚与死亡', 'Corps / Vêtement': '身体 / 服装',
       'Performance · Photographie': '行为 · 摄影', 'Acrylique sur papier': '纸本丙烯',
-      'Projets sélectionnés · 2023—2026': '精选项目 · 2023—2026', 'Œuvres': '作品集',
+      'Projets sélectionnés · 2023—2026': '精选项目 · 2023—2026', 'Œuvres': '作品',
       '2023 · Installation · Vue d’exposition': '2023 · 装置 · 展览现场',
       'Inspiré du Dialogue de la Mode et de la Mort de Giacomo Leopardi, le projet observe le vêtement comme forme passagère, image sociale et enveloppe du corps. L’installation met en tension l’apparence, la mélancolie et la mortalité.': '项目灵感来自贾科莫·莱奥帕尔迪的《时尚与死亡的对话》，将服装视为短暂的形式、社会形象与身体的外壳。装置把外表、忧郁与死亡置于彼此拉扯的关系中。',
       'Performance · Textile · Photographie': '行为 · 纺织 · 摄影',
