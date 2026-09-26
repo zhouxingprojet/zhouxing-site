@@ -255,6 +255,10 @@
       const trailing = node.textContent.match(/\s*$/)[0];
       node.textContent = leading + (dictionary[node.__source] || node.__source) + trailing;
     });
+    const libraryCardTitle = document.querySelector(".home-path[href*='x-art-lab'] h3");
+    if (libraryCardTitle) {
+      libraryCardTitle.textContent = language === 'zh' ? '文库' : 'X-ART Lab.';
+    }
     const homeTitle = document.querySelector('#home-title');
     const homeTitleParts = {
       fr: ['Art · Vêtement ·', 'Corps · Mémoire'],
